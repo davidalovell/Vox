@@ -1,2 +1,2 @@
 # Vox
-'Voice' object for monome crow
+'Voice' object for monome crow, sequenced with sequins
