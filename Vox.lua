@@ -103,14 +103,19 @@ end
 
 function Vox:__on() return self.on and self._on end
 function Vox:__level() return self.level * self._level end
-function Vox:__wrap() return self.wrap and 0 or math.floor(self:__degree() / #self.scale) end
 function Vox:__octave() return self.octave + self._octave + self:__wrap() end
 function Vox:__degree() return (self.degree - 1) + (self._degree - 1) end
 function Vox:__transpose() return self.transpose + self._transpose end
+
+function Vox:__wrap() return self.wrap and 0 or math.floor(self:__degree() / #self.scale) end
+
 function Vox:__val() return self.scale[self:__degree() % #self.scale + 1] end
-function Vox:__mask() return self.mask == nil and self:__val() or self.scale[selector(self:__val(), self.mask, 1, #self.scale)] end
+function Vox:__maskval() return self.scale[selector(self:__val(), self.mask, 1, #self.scale)] end
+
+function Vox:__mask() return self.mask == nil and self:__val() or self:__maskval() end
 function Vox:__pos() return self:__mask() + self:__transpose() end
 function Vox:__neg() return (7 - self:__pos()) % 12 end
+
 function Vox:__note() return (self.negharm and self:__neg() or self:__pos()) + self:__octave() * 12 end
 
 -- functions for mulitple Vox objects
