@@ -117,7 +117,7 @@ function Vox.apply_mask(degree, scale, mask)
   return degree
 end
 
--- functions for mulitple Vox objects
+-- helper functions
 function Vset(objects, property, val)
   for k, v in pairs(objects) do
     v[property] = val
@@ -128,6 +128,14 @@ function Vdo(objects, method, args)
   for k, v in pairs(objects) do
     v[method](v, args)
   end
+end
+
+function Vdyn(data)
+  local updated_data = {}
+  for k,v in pairs(data) do
+    updated_data[k] = data[k]()
+  end
+  return updated_data
 end
 --
 
@@ -204,12 +212,7 @@ function init()
 
   input[2]{mode = 'change', threshold = 4, direction = 'rising',
     change = function()
-      tsnm:play{
-        degree = cv.degree,
-        octave = cv.octave,
-        on = tsnm.seq.on(),
-        level = linlin(txi.input[4], 0, 5, 0, 2)
-      }
+      tsnm:play(Vdyn(tsnm.seq.preset))
     end
   }
 
@@ -232,17 +235,18 @@ function init()
     octave = -2,
     synth = function(note, level) ii.jf.play_voice(6, note / 12, level) end,
     seq = {
-      sync_preset = { {4}, {3,1}, {2,2}, {3,1,2,2,1,3,2,2} },
+      -- sync_preset = { {4}, {3,1}, {2,2}, {3,1,2,2,1,3,2,2} },
       sync = sequins{3,1,2,2,1,3,2,2},
       division = 1,
       degree = sequins{1,1,sequins{5,8,7,5},sequins{8,5,6,2}:all():every(4)},
+      preset = {
+        degree = function() return cv.degree + (bass.seq.degree() - 1) end,
+        level = function() return linlin(txi.input[2], 0, 5, 0, 3) end
+      },
       action = function()
         while true do
           -- bass.seq.sync:settable(selector(txi.param[2], bass.seq.sync_preset, 0, 10))
-          bass:play{
-            degree = cv.degree + (bass.seq.degree() - 1),
-            level = linlin(txi.input[2], 0, 5, 0, 3)
-          }
+          bass:play(Vdyn(bass.seq.preset))
           clock.sync(bass.seq.sync() * bass.seq.division * all.division * selector(txi.param[2], divs, 0, 10))
         end
       end
@@ -258,12 +262,13 @@ function init()
       sync = sequins{16,1,0.5,0.5,2},
       division  = 1,
       degree = sequins{1,4,5,9},
+      preset = {
+        degree = function() return cv.degree + (lead1.seq.degree() - 1) end,
+        level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
+      },
       action = function()
         while true do
-          lead1:play{
-            degree = cv.degree + (lead1.seq.degree() - 1),
-            level = linlin(txi.input[3], 0, 5, 0, 3)
-          }
+          lead1:play(Vdyn(lead1.seq.preset))
           clock.sync(lead1.seq.sync() * lead1.seq.division * all.division * selector(txi.param[3], divs, 0, 10))
         end
       end
@@ -280,12 +285,13 @@ function init()
       sync = sequins{16,1.5,1,2,0.5},
       division = 1,
       degree = sequins{1,4,5,9}:step(3),
+      preset = {
+        degree = function() return cv.degree + (lead2.seq.degree() - 1) end,
+        level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
+      },
       action = function()
         while true do
-          lead2:play{
-            degree = cv.degree + (lead2.seq.degree() - 1),
-            level = linlin(txi.input[3], 0, 5, 0, 3)
-          }
+          lead2:play(Vdyn(lead2.seq.preset))
           clock.sync(lead2.seq.sync() * lead2.seq.division * all.division * selector(txi.param[4], divs, 0, 10))
         end
       end
@@ -297,7 +303,13 @@ function init()
     level = 0.3,
     synth = function(note, level) ii.wsyn.play_note(note / 12, level) end,
     seq = {
-      on = sequins{true,true,false}
+      on = sequins{true,true,false},
+      preset = {
+        degree = function() return cv.degree end,
+        octave = function() return cv.octave end,
+        on = function() return tsnm.seq.on() end,
+        level = function() return linlin(txi.input[4], 0, 5, 0, 2) end
+      }
     }
   }
 
