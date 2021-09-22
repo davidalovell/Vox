@@ -234,6 +234,9 @@ function init()
   bass = Vox:new{
     octave = -2,
     synth = function(note, level) ii.jf.play_voice(6, note / 12, level) end,
+    -- preset = {vox = {}, sync = {}}
+    -- vox_preset
+    -- sync_preset
     seq = {
       -- sync_preset = { {4}, {3,1}, {2,2}, {3,1,2,2,1,3,2,2} },
       sync = sequins{3,1,2,2,1,3,2,2},
