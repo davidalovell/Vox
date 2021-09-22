@@ -131,11 +131,11 @@ function Vdo(objects, method, args)
 end
 
 function Vdyn(data)
-  local updated_data = {}
-  for k,v in pairs(data) do
-    updated_data[k] = data[k]()
+  local updated = {}
+  for k, v in pairs(data) do
+    updated[k] = type(v) == 'function' and data[k]() or data[k]
   end
-  return updated_data
+  return updated
 end
 --
 
