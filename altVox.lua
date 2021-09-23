@@ -75,7 +75,7 @@ function Vox:new(args)
   o.transpose = args.transpose == nil and 0 or args.transpose
   o.degree = args.degree == nil and 1 or args.degree
   o.octave = args.octave == nil and 0 or args.octave
-  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) end or args.synth
+  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) or args.synth
   o.wrap = args.wrap ~= nil and args.wrap or false
   o.mask = args.mask
   o.negharm = args.negharm ~= nil and args.negharm or false
@@ -140,50 +140,6 @@ end
 --
 
 
--- ii getters and event handlers
--- DL, last modified 2021-09-12
-
--- ii tables
-txi = {param = {0,0,0,0}, input = {0,0,0,0}}
-
--- ii getters
-function ii_getter()
-  if txi then
-    for i = 1, 4 do
-      ii.txi.get('param', i)
-      ii.txi.get('in', i)
-    end
-  end
-end
-
--- ii event handlers
-ii.txi.event = function(e, val)
-  if txi then
-    txi[e.name == 'in' and 'input' or e.name][e.arg] = val
-  end
-end
-
--- helper functions
-function clamp(x, min, max)
-  return math.min( math.max( min, x ), max )
-end
-
-function round(x)
-  return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
-end
-
-function linlin(x, in_min, in_max, out_min, out_max)
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-end
-
-function selector(x, data, in_min, in_max, out_min, out_max)
-  out_min = out_min or 1
-  out_max = out_max or #data
-  return data[ clamp( round( linlin( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
-end
---
-
-
 -- init
 function init()
   ii.jf.mode(1)
@@ -208,16 +164,7 @@ function init()
 
   all = {
     division = 1,
-    action = function()
-      while true do
-        ii_getter()
-        clock.tempo = linlin(txi.input[1], 0, 5, 30, 300)
-        all.division = selector(txi.param[1], divs, 0, 10)
-        clock.sync(1/32)
-      end
-    end
   }
-  all.clock = clock.run(all.action)
 
   bass = Vox:new{
     octave = -2,
@@ -227,16 +174,9 @@ function init()
       division = 1,
       degree = sequins{1,1,sequins{5,8,7,5},sequins{8,5,6,2}:all():every(4)},
       vox_preset = {
-        degree = function() return cv.degree + (bass.seq.degree() - 1) end,
-        level = function() return linlin(txi.input[2], 0, 5, 0, 3) end
+        degree = function() return cv.degree + (bass.seq.degree() - 1) end
       },
-      sync_preset = function()
-        return
-          bass.seq.sync() *
-          bass.seq.division *
-          all.division *
-          selector(txi.param[2], divs, 0, 10)
-      end,
+      sync_preset = function() return bass.seq.sync() * bass.seq.division * all.division end,
       action = function()
         while true do
           bass:play(bass.seq.vox_preset)
@@ -256,16 +196,9 @@ function init()
       division  = 1,
       degree = sequins{1,4,5,9},
       vox_preset = {
-        degree = function() return cv.degree + (lead1.seq.degree() - 1) end,
-        level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
+        degree = function() return cv.degree + (lead1.seq.degree() - 1) end
       },
-      sync_preset = function()
-        return
-          lead1.seq.sync() *
-          lead1.seq.division *
-          all.division *
-          selector(txi.param[3], divs, 0, 10)
-      end,
+      sync_preset = function() return lead1.seq.sync() * lead1.seq.division * all.division end,
       action = function()
         while true do
           lead1:play(lead1.seq.vox_preset)
@@ -287,15 +220,8 @@ function init()
       degree = sequins{1,4,5,9}:step(3),
       vox_preset = {
         degree = function() return cv.degree + (lead2.seq.degree() - 1) end,
-        level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
       },
-      sync_preset = function()
-        return
-          lead2.seq.sync() *
-          lead2.seq.division *
-          all.division *
-          selector(txi.param[4], divs, 0, 10)
-      end,
+      sync_preset = function() return lead2.seq.sync() * lead2.seq.division * all.division end,
       action = function()
         while true do
           lead2:play(lead2.seq.vox_preset)
@@ -314,8 +240,7 @@ function init()
       vox_preset = {
         degree = function() return cv.degree end,
         octave = function() return cv.octave end,
-        on = function() return tsnm.seq.on() end,
-        level = function() return linlin(txi.input[4], 0, 5, 0, 2) end
+        on = function() return tsnm.seq.on() end
       }
     }
   }
