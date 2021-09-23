@@ -63,7 +63,7 @@ cv = {
 
 
 -- Vox object
--- DL, last modified 2021-09-20
+-- DL, last modified 2021-09-21
 Vox = {}
 function Vox:new(args)
   local o = setmetatable( {}, {__index = Vox} )
@@ -75,7 +75,7 @@ function Vox:new(args)
   o.transpose = args.transpose == nil and 0 or args.transpose
   o.degree = args.degree == nil and 1 or args.degree
   o.octave = args.octave == nil and 0 or args.octave
-  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) --[[ return note, level ]] end or args.synth
+  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) or args.synth
   o.wrap = args.wrap ~= nil and args.wrap or false
   o.mask = args.mask
   o.negharm = args.negharm ~= nil and args.negharm or false
@@ -85,7 +85,7 @@ function Vox:new(args)
 end
 
 function Vox:play(args)
-  local args = args == nil and {} or args
+  local args = args == nil and {} or self.update(args)
   local on, level, scale, transpose, degree, octave, synth, mask, wrap, negharm, ix, val, note
 
   on = self.on and (args.on == nil and true or args.on)
@@ -105,6 +105,14 @@ function Vox:play(args)
   note = val + transpose + (octave * 12)
 
   return on and synth(note, level)
+end
+
+function Vox.update(data)
+  local updated = {}
+  for k, v in pairs(data) do
+    updated[k] = type(v) == 'function' and data[k]() or data[k]
+  end
+  return updated
 end
 
 function Vox.apply_mask(degree, scale, mask)
@@ -129,14 +137,6 @@ function Vdo(objects, method, args)
     v[method](v, args)
   end
 end
-
-function Vdyn(data)
-  local updated = {}
-  for k, v in pairs(data) do
-    updated[k] = type(v) == 'function' and data[k]() or data[k]
-  end
-  return updated
-end
 --
 
 
@@ -144,20 +144,14 @@ end
 -- DL, last modified 2021-09-12
 
 -- ii tables
-txi = {param = {0,0,0,0}, input = {0,0,0,0}} -- comment if no txi
--- fb = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0} -- comment if no 16n faderbank
+txi = {param = {0,0,0,0}, input = {0,0,0,0}}
 
 -- ii getters
-function ii_getter() -- call this inside a a clock or metro
+function ii_getter()
   if txi then
     for i = 1, 4 do
       ii.txi.get('param', i)
       ii.txi.get('in', i)
-    end
-  end
-  if fb then
-    for i = 1, 16 do
-      ii.faders.get(i)
     end
   end
 end
@@ -166,12 +160,6 @@ end
 ii.txi.event = function(e, val)
   if txi then
     txi[e.name == 'in' and 'input' or e.name][e.arg] = val
-  end
-end
-
-ii.faders.event = function(e, val)
-  if fb then
-    fb[e.arg] = val
   end
 end
 
@@ -212,7 +200,7 @@ function init()
 
   input[2]{mode = 'change', threshold = 4, direction = 'rising',
     change = function()
-      tsnm:play(Vdyn(tsnm.seq.preset))
+      tsnm:play(tsnm.seq.vox_preset)
     end
   }
 
@@ -234,23 +222,25 @@ function init()
   bass = Vox:new{
     octave = -2,
     synth = function(note, level) ii.jf.play_voice(6, note / 12, level) end,
-    -- preset = {vox = {}, sync = {}}
-    -- vox_preset
-    -- sync_preset
     seq = {
-      -- sync_preset = { {4}, {3,1}, {2,2}, {3,1,2,2,1,3,2,2} },
       sync = sequins{3,1,2,2,1,3,2,2},
       division = 1,
       degree = sequins{1,1,sequins{5,8,7,5},sequins{8,5,6,2}:all():every(4)},
-      preset = {
+      vox_preset = {
         degree = function() return cv.degree + (bass.seq.degree() - 1) end,
         level = function() return linlin(txi.input[2], 0, 5, 0, 3) end
       },
+      sync_preset = function()
+        return
+          bass.seq.sync() *
+          bass.seq.division *
+          all.division *
+          selector(txi.param[2], divs, 0, 10)
+      end,
       action = function()
         while true do
-          -- bass.seq.sync:settable(selector(txi.param[2], bass.seq.sync_preset, 0, 10))
-          bass:play(Vdyn(bass.seq.preset))
-          clock.sync(bass.seq.sync() * bass.seq.division * all.division * selector(txi.param[2], divs, 0, 10))
+          bass:play(bass.seq.vox_preset)
+          clock.sync(bass.seq.sync_preset())
         end
       end
     }
@@ -265,14 +255,21 @@ function init()
       sync = sequins{16,1,0.5,0.5,2},
       division  = 1,
       degree = sequins{1,4,5,9},
-      preset = {
+      vox_preset = {
         degree = function() return cv.degree + (lead1.seq.degree() - 1) end,
         level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
       },
+      sync_preset = function()
+        return
+          lead1.seq.sync() *
+          lead1.seq.division *
+          all.division *
+          selector(txi.param[3], divs, 0, 10)
+      end,
       action = function()
         while true do
-          lead1:play(Vdyn(lead1.seq.preset))
-          clock.sync(lead1.seq.sync() * lead1.seq.division * all.division * selector(txi.param[3], divs, 0, 10))
+          lead1:play(lead1.seq.vox_preset)
+          clock.sync(lead1.seq.sync_preset())
         end
       end
     }
@@ -288,14 +285,21 @@ function init()
       sync = sequins{16,1.5,1,2,0.5},
       division = 1,
       degree = sequins{1,4,5,9}:step(3),
-      preset = {
+      vox_preset = {
         degree = function() return cv.degree + (lead2.seq.degree() - 1) end,
         level = function() return linlin(txi.input[3], 0, 5, 0, 3) end
       },
+      sync_preset = function()
+        return
+          lead2.seq.sync() *
+          lead2.seq.division *
+          all.division *
+          selector(txi.param[4], divs, 0, 10)
+      end,
       action = function()
         while true do
-          lead2:play(Vdyn(lead2.seq.preset))
-          clock.sync(lead2.seq.sync() * lead2.seq.division * all.division * selector(txi.param[4], divs, 0, 10))
+          lead2:play(lead2.seq.vox_preset)
+          clock.sync(lead2.seq.sync_preset())
         end
       end
     }
@@ -307,7 +311,7 @@ function init()
     synth = function(note, level) ii.wsyn.play_note(note / 12, level) end,
     seq = {
       on = sequins{true,true,false},
-      preset = {
+      vox_preset = {
         degree = function() return cv.degree end,
         octave = function() return cv.octave end,
         on = function() return tsnm.seq.on() end,
