@@ -17,7 +17,7 @@ locrian = {0,1,3,5,6,8,10} -- flat 2nd, flat 5th, flat 6th, flat 7th
 
 -- other
 chromatic = {0,1,2,3,4,5,6,7,8,9,10,11}
-harmoninc_min = {0,2,3,5,7,8,11} -- aeolian, sharp 7th
+harmonic_min = {0,2,3,5,7,8,11} -- aeolian, sharp 7th
 diminished = {0,2,3,5,6,8,9,11}
 whole = {0,2,4,6,8,10}
 
@@ -70,7 +70,7 @@ function Vox:new(args)
   o.transpose = args.transpose == nil and 0 or args.transpose
   o.degree = args.degree == nil and 1 or args.degree
   o.octave = args.octave == nil and 0 or args.octave
-  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) or args.synth
+  o.synth = args.synth == nil and function(note, level) ii.jf.play_note(note / 12, level) end or args.synth
   o.wrap = args.wrap ~= nil and args.wrap or false
   o.mask = args.mask
   o.negharm = args.negharm ~= nil and args.negharm or false
@@ -184,7 +184,7 @@ function init()
 
   lead1 = Vox:new{
     level = 0.5,
-    octave = 0,
+    octave = 1,
     synth = function(note, level) ii.jf.play_note(note / 12, level) end,
     seq = {
       sync = sequins{16,1,0.5,0.5,2},
@@ -206,7 +206,7 @@ function init()
 
   lead2 = Vox:new{
     level = 0.5,
-    octave = 0,
+    octave = 1,
     degree = 7,
     synth = function(note, level) ii.jf.play_note(note / 12, level) end,
     seq = {
@@ -226,6 +226,25 @@ function init()
     }
   }
   lead2.clock = clock.run(lead2.seq.action)
+
+  lead3 = Vox:new{
+    seq = {
+      division = 1,
+      sync = sequins{3,1},
+      degree = sequins{5,4,0},
+      vox_preset = {
+        degree = function() return cv.degree + (lead3.seq.degree() - 1) end,
+      },
+      sync_preset = function() return lead3.seq.sync() * lead3.seq.division * all.division end,
+      action = function()
+        while true do
+          lead3:play(lead3.seq.vox_preset)
+          clock.sync(lead3.seq.sync_preset())
+        end
+      end
+    }
+  }
+  lead3.clock = clock.run(lead3.seq.action)
 
   tsnm = Vox:new{
     level = 0.3,
