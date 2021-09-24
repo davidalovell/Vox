@@ -1,13 +1,11 @@
 --- Vox
--- DL 2021-09-20
 
 -- divisions
 divs = {1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32}
 --
 
 
--- scales
-
+-- scales/chords
 -- modes
 ionian = {0,2,4,5,7,9,11}
 dorian = {0,2,3,5,7,9,10} -- flat 3rd, flat 7th
@@ -39,8 +37,6 @@ blues_min = mask(phrygian, {1,3,4,6,7})
 blues_maj = mask(mixolydian, {1,2,4,5,6})
 penta_min = mask(aeolian, {1,3,4,5,7})
 japanese = mask(phrygian, {1,2,4,5,6})
---
-
 
 -- chords
 I = {1,3,5}
@@ -63,7 +59,6 @@ cv = {
 
 
 -- Vox object
--- DL, last modified 2021-09-21
 Vox = {}
 function Vox:new(args)
   local o = setmetatable( {}, {__index = Vox} )
