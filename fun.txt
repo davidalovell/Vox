@@ -1,0 +1,7618 @@
+Last login: Thu Sep 16 10:17:45 on ttys000
+davidlovell@DL ~ % cd documents/github/vox_object
+davidlovell@DL vox_object % lua -i 'object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: cannot open object.lua: No such file or directory
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+0
+1
+2
+3
+> os.exit
+function: 0x10c3f6a00
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> a:play()
+0
+> a:play{degree =1}
+0
+> a:play{mask = {1,3,5}, degree =1}
+1
+2
+3
+4
+0
+> a:play{mask = {1,3,5}, degree =2}
+1
+2
+3
+4
+2
+> a:play{mask = {1,3,5}, degree =3}
+1
+2
+3
+4
+4
+> a:play{mask = {1,3,5}, degree =4}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =5}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =6}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =7}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =8}
+1
+2
+3
+4
+12
+> a:play{mask = {1,3,5}, degree =1}
+1
+2
+3
+4
+0
+> a:play{mask = {1,3,5}, degree =2}
+1
+2
+3
+4
+2
+> a:play{mask = {1,3,5}, degree =3}
+1
+2
+3
+4
+4
+> a:play{mask = {1,3,5}, degree =4}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =5}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =6}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =7}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree =8}
+1
+2
+3
+4
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 1}
+1
+2
+3
+4
+0
+> a:play{mask = {1,3,5}, degree = 2}
+1
+2
+3
+4
+2
+> a:play{mask = {1,3,5}, degree = 3}
+1
+2
+3
+4
+4
+> a:play{mask = {1,3,5}, degree = 4}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree = 5}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree = 6}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree = 7}
+1
+2
+3
+4
+5
+> a:play{mask = {1,3,5}, degree = 8}
+1
+2
+3
+4
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1
+2
+3
+> a:play{mask = {1,3,5}, degree = 1}
+1
+2
+3
+0
+> a:play{mask = {1,3,5}, degree = 2}
+1
+2
+3
+2
+> a:play{mask = {1,3,5}, degree = 3}
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 3}
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 4}
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 5}
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 6}
+1
+2
+3
+4
+> a:play{mask = {1,3,5}, degree = 7}
+1
+2
+3
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+0
+0
+2
+0
+4
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+0
+2
+0
+4
+0
+0
+> a:play{mask = {1,3,5}, degree = 2}
+1
+1
+1
+1
+3
+1
+0
+> a:play{mask = {1,3,5}, degree = 3}
+2
+2
+0
+2
+2
+0
+4
+> 
+> a:play{mask = {1,3,5}, degree = 3}
+2
+2
+0
+2
+2
+0
+4
+> a:play{mask = {1,3,5}, degree = 4}
+3
+3
+1
+3
+1
+1
+4
+> a:play{mask = {1,3,5}, degree = 5}
+4
+4
+2
+4
+0
+2
+7
+> a:play{mask = {1,3,5}, degree = 6}
+5
+5
+3
+5
+1
+3
+7
+> a:play{mask = {1,3,5}, degree = 1}
+0
+0
+2
+0
+4
+0
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1	1	0	0
+2	3	2	0
+3	5	4	0
+> a:play{mask = {1,3,5}, degree = 1}
+1	1	0	0
+2	3	2	0
+3	5	4	0
+0
+> a:play{mask = {1,3,5}, degree = 2}
+1	1	1	1
+2	3	1	1
+3	5	3	1
+0
+> a:play{mask = {1,3,5}, degree = 3}
+1	1	2	2
+2	3	0	2
+3	5	2	0
+4
+> a:play{mask = {1,3,5}, degree = 4}
+1	1	3	3
+2	3	1	3
+3	5	1	1
+4
+> a:play{mask = {1,3,5}, degree = 5}
+1	1	4	4
+2	3	2	4
+3	5	0	2
+7
+> a:play{mask = {1,3,5}, degree = 1}
+1	1	0	0
+2	3	2	0
+3	5	4	0
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+> > 
+> a:play{mask = {1,3,5}, degree = 2}
+1	1	current:	1	closest:	1
+2	3	current:	1	closest:	1
+3	5	current:	3	closest:	1
+0
+> a:play{mask = {1,3,5}, degree = 3}
+1	1	current:	2	closest:	2
+2	3	current:	0	closest:	2
+3	5	current:	2	closest:	0
+4
+> a:play{mask = {1,3,5}, degree = 4}
+1	1	current:	3	closest:	3
+2	3	current:	1	closest:	3
+3	5	current:	1	closest:	1
+4
+> a:play{mask = {1,3,5}, degree = 5}
+1	1	current:	4	closest:	4
+2	3	current:	2	closest:	4
+3	5	current:	0	closest:	2
+7
+> a:play{mask = {1,3,5}, degree = 6}
+1	1	current:	5	closest:	5
+2	3	current:	3	closest:	5
+3	5	current:	1	closest:	3
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1	1	current:	6	closest:	6
+2	3	current:	4	closest:	6
+3	5	current:	2	closest:	4
+7
+> a:play{mask = {1,3,5}, degree = 8}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+> a:play{mask = {1,3,5}, degree = 1}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+0
+> a:play{mask = {1,3,5}, degree = 8}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+12
+> a:play{mask = {1,3,5}, degree = 7}
+1	1	current:	6	closest:	6
+2	3	current:	4	closest:	6
+3	5	current:	2	closest:	4
+4	1	current:	6	closest:	2
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1	1	current:	6	closest:	6
+2	3	current:	4	closest:	6
+3	5	current:	2	closest:	4
+4	1	current:	6	closest:	2
+7
+> a:play{mask = {1,3,5}, degree = 6}
+1	1	current:	5	closest:	5
+2	3	current:	3	closest:	5
+3	5	current:	1	closest:	3
+4	1	current:	5	closest:	1
+7
+> a:play{mask = {1,3,5}, degree = 8}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+12
+> a:play{mask = {1,3,5}, degree = 1}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+0
+> os.exit90
+nil
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+> a:play{mask = {1,3,5}, degree = 1}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+0
+> a:play{mask = {1,3,5}, degree = 5}
+1	1	current:	4	closest:	4
+2	3	current:	2	closest:	4
+3	5	current:	0	closest:	2
+4	1	current:	4	closest:	0
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1	1	current:	6	closest:	6
+2	3	current:	4	closest:	6
+3	5	current:	2	closest:	4
+4	1	current:	6	closest:	2
+7
+> a:play{mask = {1,3,5}, degree = 8}
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+12
+> a:play{mask = {1,3,5}, degree = 7}
+1	1	current:	6	closest:	6
+2	3	current:	4	closest:	6
+3	5	current:	2	closest:	4
+4	1	current:	6	closest:	2
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+8
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+8
+1	1	current:	0	closest:	0
+2	3	current:	2	closest:	0
+3	5	current:	4	closest:	0
+4	1	current:	0	closest:	0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+vox_object.lua:116: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:116: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+vox_object.lua:116: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:116: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 1}
+5
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+17
+> a:play{mask = {4,6,8}, degree = 9}
+17
+> a:play{mask = {4,6,8}, degree = 1}
+5
+> a:play{mask = {4,6,8}, degree = 2}
+5
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 2}
+0
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 9}
+12
+> a:play{mask = {4,6,8}, degree = 11}
+17
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 8}
+17
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 1}
+5
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree =1}
+0
+> a:play{mask = {1,3,5}, degree =8}
+12
+> a:play{mask = {1,3,5}, degree =7}
+7
+> a:play{mask = {1,3,5}, degree =6}
+7
+> a:play{mask = {1,3,5}, degree =1}
+0
+> a:play{mask = {4,6,5}, degree =1}
+5
+> a:play{mask = {4,6,8}, degree =1}
+0
+> a:play{mask = {4,6,8}, degree =1}
+0
+> a:play{mask = {4,6,8}, degree = 2}
+0
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 9}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree  =8}
+12
+> a:play{mask = {1,3,5}, degree  =5}
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 6}
+5
+> a:play{mask = {1,3,5}, degree = 7}
+5
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 9}
+14
+> a:play{mask = {1,3,5}, degree = 10}
+14
+> a:play{mask = {1,3,5}, degree = 11}
+17
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 1}
+4
+> a:play{mask = {4,6,8}, degree = 8}
+16
+> a:play{mask = {4,6,8}, degree = 7}
+10
+> a:play{mask = {4,6,8}, degree = 6}
+7
+> a:play{mask = {4,6,8}, degree = 1}
+4
+> a:play{mask = {4,6,8}, degree = 1}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 2}
+0
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {4,6,8}, degree = 1}
+5
+> a:play{mask = {4,6,8}, degree = 2}
+5
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+17
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+1
+0
+> a:play{mask = {1,3,5}, degree = 2}
+1
+0
+> a:play{mask = {1,3,5}, degree = 3}
+1
+4
+> a:play{mask = {1,3,5}, degree = 4}
+1
+4
+> a:play{mask = {1,3,5}, degree = 5}
+1
+7
+> a:play{mask = {2,3,5}, degree = 5}
+2
+7
+> a:play{mask = {1,3,5}, degree = 5}
+1
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+8
+0
+> a:play{mask = {1,3,5}, degree = 2}
+8
+0
+> a:play{mask = {1,3,5}, degree = 3}
+8
+4
+> a:play{mask = {1,3,5}, degree = 7}
+8
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5}, degree = 2}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5}, degree = 3}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5}, degree = 6}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree =1}
+0
+> a:play{mask = {1,3,5}, degree =2}
+0
+> a:play{mask = {1,3,5}, degree =3}
+4
+> a:play{mask = {1,3,5}, degree =4}
+4
+> a:play{mask = {1,3,5}, degree =5}
+7
+> a:play{mask = {1,3,5}, degree =6}
+7
+> a:play{mask = {1,3,5}, degree =7}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:116: ')' expected (to close '(' at line 115) near 'args'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:116: ')' expected (to close '(' at line 115) near 'args'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:116: ')' expected (to close '(' at line 115) near 'args'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 7}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5}, degree = 7}
+vox_object.lua:118: attempt to perform arithmetic on a nil value (field 'val')
+stack traceback:
+	vox_object.lua:118: in function <vox_object.lua:99>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 7}
+12
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 2}
+0
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 9}
+12
+> a:play{mask = {4,6,8}, degree = 10}
+17
+> a:play{mask = {4,6,8}, degree = 11}
+17
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 2}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> a:play{mask = {1,2}, degree = 4}
+2
+> a:play{mask = {1,2}, degree = 5}
+2
+> a:play{mask = {1,2}, degree = 6}
+12
+> a:play{mask = {1,2}, degree = 7}
+12
+> a:play{mask = {1,2}, degree = 8}
+12
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 9}
+14
+> a:play{mask = {1,2}, degree = 10}
+14
+> a:play{mask = {1,2}, degree = 10}
+14
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 2}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 0}
+0
+> a:play{mask = {1,3,5}, degree = -1}
+-5
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{degree = 1}
+vox_object.lua:128: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:128: in method '_mask'
+	vox_object.lua:115: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{degree =1}
+vox_object.lua:127: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:127: in method '_mask'
+	vox_object.lua:121: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a =Vox:nwe()
+stdin:1: method 'nwe' is not callable (a nil value)
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> a =Vox:new()
+> a:play{degree =1}
+vox_object.lua:128: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:128: in method '_mask'
+	vox_object.lua:122: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{degree = 1}
+vox_object.lua:127: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:127: in method '_mask'
+	vox_object.lua:121: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> a:play{}
+vox_object.lua:127: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:127: in method '_mask'
+	vox_object.lua:121: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:127: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:127: in method '_mask'
+	vox_object.lua:121: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:129: attempt to index a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:129: in method '_mask'
+	vox_object.lua:123: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:123: attempt to perform arithmetic on a nil value
+stack traceback:
+	vox_object.lua:123: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:118: ')' expected (to close '(' at line 117) near 'end'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:124: attempt to perform arithmetic on a nil value (field 'mask')
+stack traceback:
+	vox_object.lua:124: in function <vox_object.lua:100>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+5
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+9
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{degree =2}
+2
+> a:play{mask = {1,3,5}, degree =2}
+0
+> a:play{mask = {1,3,5}, degree =1}
+0
+> a:play{mask = {1,3,5}, degree =2}
+0
+> a:play{mask = {1,3,5}, degree =3}
+4
+> a:play{mask = {1,3,5}, degree =4}
+4
+> a:play{mask = {1,3,5}, degree =5}
+7
+> a:play{mask = {1,3,5}, degree =6}
+7
+> a:play{mask = {1,3,5}, degree =7}
+12
+> a:play{mask = {1,3,5}, degree =6}
+7
+> a:play{mask = {1,3,5}, degree =5}
+7
+> a:play{mask = {1,3,5}, degree =4}
+4
+> a:play{mask = {1,3,5}, degree =1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+0
+> a:play{mask = {1,3,5}, degree = 6}
+0
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1
+12
+> a:play{mask = {1,3,5}, degree = 1}
+0
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+0
+> a:play{mask = {1,3,5}, degree = 3}
+0
+4
+> a:play{mask = {1,3,5}, degree = 4}
+0
+4
+> a:play{mask = {1,3,5}, degree = 5}
+0
+7
+> a:play{mask = {1,3,5}, degree = 6}
+0
+7
+> a:play{mask = {1,3,5}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,3,5}, degree = 7}
+1
+12
+> a:play{mask = {1,3,5}, degree = 8}
+0
+12
+> a:play{mask = {1,3,5}, degree = 7}
+1
+12
+> a:play{mask = {1,3,5}, degree = 6}
+0
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1
+12
+> a:play{mask = {1,3,5}, degree = 8}
+0
+12
+> a:play{mask = {1,3,5}, degree = 1}
+0
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+0
+> a:play{mask = {1,3,5}, degree = 3}
+0
+4
+> a:play{mask = {1,3,5}, degree = 4}
+0
+4
+> a:play{mask = {1,3,5}, degree = 5}
+0
+7
+> a:play{mask = {1,3,5}, degree = 6}
+0
+7
+> a:play{mask = {1,3,5}, degree = 7}
+1
+12
+> a:play{mask = {1,3,5}, degree = 8}
+0
+12
+> a:play{mask = {1,3,5}, degree = 9}
+0
+12
+> a:play{mask = {1,3,5}, degree = 2}
+0
+0
+> a:play{mask = {1,3,5}, degree = 10}
+0
+16
+> a:play{mask = {1,3,5}, degree = 11}
+0
+16
+> a:play{mask = {1,3,5}, degree = 12}
+0
+19
+> a:play{mask = {1,3,5}, degree = 13}
+0
+19
+> a:play{mask = {1,3,5}, degree = 14}
+1
+24
+> a:play{mask = {1,3,5}, degree = 15}
+0
+24
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{scale = lydian, degree = 1}
+0
+> a:play{scale = lydian, degree = 2}
+2
+> a:play{scale = lydian, degree = 3}
+4
+> a:play{scale = lydian, degree = 4}
+6
+> a:play{scale = lydian, degree = 5}
+7
+> a:play{scale = lydian, degree = 6}
+9
+> a:play{scale = lydian, degree = 7}
+11
+> a:play{scale = lydian, degree = 8}
+12
+> a:play{scale = lydian, degree = 1}
+0
+> a:play{scale = lydian, mask = {1,3,13}, degree = 1}
+0
+> a:play{scale = lydian, mask = {1,3,13}, degree = 2}
+0
+> a:play{scale = lydian, mask = {1,3,13}, degree = 3}
+4
+> a:play{scale = lydian, mask = {1,3,13}, degree = 4}
+4
+> a:play{scale = lydian, mask = {1,3,13}, degree = 5}
+9
+> a:play{scale = lydian, mask = {1,3,13}, degree = 6}
+9
+> a:play{scale = lydian, mask = {1,3,13}, degree = 7}
+9
+> a:play{scale = lydian, mask = {1,3,13}, degree = 8}
+12
+> a:play{scale = lydian, mask = {1,3,13}, degree = 9}
+12
+> a:play{scale = lydian, mask = {1,3,13}, degree = 10}
+16
+> a:play{scale = lydian, mask = {1,3,13}, degree = 11}
+16
+> a:play{scale = lydian, mask = {1,3,13}, degree = 112}
+189
+> a:play{scale = lydian, mask = {1,3,13}, degree = 12}
+21
+> a:play{mask = {1,3,5,7,9,11}, degree = 12}
+19
+> a:play{mask = {1,3,5,7,9,11}, degree = 1}
+0
+> a:play{mask = {1,3,5,7,9,11}, degree = 3}
+4
+> a:play{mask = {1,3,5,7,9,11}, degree = 2}
+2
+> a:play{mask = {1,3,5,7,9,11}, degree = 1}
+0
+> a:play{mask = {1,3,5,7,9,11}, degree = 2}
+2
+> a:play{mask = {1,3,5,7,9,11}, degree = 3}
+4
+> a:play{mask = {1,3,5,7,9,11}, degree = 4}
+5
+> a:play{mask = {1,3,5,7,9,11}, degree = 5}
+7
+> a:play{mask = {1,3,5,7,9,11}, degree = 6}
+7
+> a:play{mask = {1,3,5,7,9,11}, degree = 7}
+22
+> a:play{mask = {1,3,5,7,9,11}, degree = 8}
+12
+> a:play{mask = {1,3,5,7,9,11}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:120: syntax error near 'for'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> math.round(1.5)
+stdin:1: field 'round' is not callable (a nil value)
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> round(1.5)
+2
+> function nr(x, a, b)
+>>   return x % math.abs(a - b) >= math.abs(a - b) / 2 and math.ceil(x) or math.floor(x)
+>> end
+> nr(3,1,5)
+3
+> nr(3,1,1)
+stdin:2: attempt to perform 'n%0'
+stack traceback:
+	stdin:2: in function 'nr'
+	(...tail calls...)
+	[C]: in ?
+> nr(3,1,2)
+3
+> nr(3,1,3)
+3
+> nr(3,1,4)
+3
+> nr(3,1,4)
+3
+> function nr(x, a, b)
+>>   return x % math.abs(a - b) >= math.abs(a - b) / 2 and a or b
+>> end
+> nr(1,1,5)
+5
+> nr(1,5,1)
+1
+> function nr(x, a, b)
+>>   return x % math.abs(a - b) >= math.abs(a - b) / 2
+>>     and b
+>>     or a
+>> end
+> nr(1,5,1)                                                5
+> nr(1,1,5)
+1
+> nr(2,1,5)
+5
+> nr(3,1,5)
+5
+> nr(4,1,5)
+1
+> nr(5,1,5)
+1
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree =5}
+7
+> a:play{scale = chromatic, degree = 1}
+0
+> a:play{scale = chromatic, degree = 2}
+1
+> a:play{scale = chromatic, degree = 3}
+2
+> a:play{scale = chromatic, degree = 4}
+3
+> a:play{scale = chromatic, degree = 5}
+4
+> a:play{scale = chromatic, degree = 6}
+5
+> a:play{scale = chromatic, degree = 7}
+6
+> a:play{scale = chromatic, degree = 8}
+7
+> a:play{scale = chromatic, degree = 9}
+8
+> a:play{scale = chromatic, degree = 10}
+9
+> a:play{scale = chromatic, degree = 11}
+10
+> a:play{scale = chromatic, degree = 12}
+11
+> a:play{scale = chromatic, degree = 13}
+12
+> a:play{scale = chromatic, degree = 12}
+11
+> a:play{scale = chromatic, degree = 1}
+0
+> a:play{scale = chromatic, mask = {1}degree = 1}
+stdin:1: '}' expected near 'degree'
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree =1}
+7
+> a:play{mask = {1,3,5}, degree =2}
+7
+> a:play{mask = {1,3,5}, degree =3}
+0
+> a:play{mask = {1,3,5}, degree =4}
+0
+> a:play{mask = {1,3,5}, degree =5}
+0
+> a:play{mask = {1,3,5}, degree =6}
+0
+> a:play{mask = {1,3,5}, degree =7}
+0
+> a:play{mask = {1,3,5}, degree =8}
+19
+> a:play{mask = {1,3,5}, degree =8}
+19
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 7, negharm = true}
+0
+> a:play{mask = {1,3,5}, negharm = true, degree =1}
+7
+> a:play{mask = {1,3,5}, negharm = true, degree = 2}
+7
+> a:play{mask = {1,3,5}, negharm = true, degree = 3}
+3
+> a:play{mask = {1,3,5}, negharm = true, degree = 4}
+3
+> a:play{mask = {1,3,5}, negharm = true, degree = 5}
+0
+> a:play{mask = {1,3,5}, negharm = true, degree = 6}
+0
+> a:play{mask = {1,3,5}, negharm = true, degree = 7}
+0
+> a:play{mask = {1,3,5}, negharm = true, degree = 8}
+19
+> a:play{mask = {1,3,5}, negharm = true, degree = 9}
+19
+> a:play{mask = {1,3,5}, negharm = true, degree = 10}
+15
+> a:play{mask = {1,3,5}, negharm = true, degree = 11}
+15
+> a:play{mask = {1,3,5}, negharm = true, degree = 12}
+12
+> a:play{mask = {1,3,5}, negharm = true, degree = 13}
+12
+> a:play{mask = {1,3,5}, negharm = true, degree = 1}
+7
+> a:play{mask = {1,3,5}, negharm = false, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:121: ')' expected (to close '(' at line 120) near 'end'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+9
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+0
+> a:play{degree = 1}
+0
+> a:play{degree = 7}
+10
+> a:play{degree = 6}
+9
+> a:play{degree = 6}
+9
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{degree =8}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+vox_object.lua:129: attempt to perform arithmetic on a table value (field 'mask')
+stack traceback:
+	vox_object.lua:129: in function <vox_object.lua:103>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+4
+> a:play{mask = {1,3,5}, degree = 6}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+4
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+4
+> a:play{mask = {1,3,5}, degree = 6}
+4
+> a:play{mask = {1,3,5}, degree = 7}
+4
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 9}
+12
+> a:play{mask = {0,3,5}, degree = 9}
+16
+> a:play{mask = {0,3,5}, degree = 1}
+10
+> a:play{mask = {0,3,5}, degree = 2}
+4
+> a:play{mask = {0,3,5}, degree = 3}
+4
+> a:play{mask = {0,3,5}, degree = 4}
+4
+> a:play{mask = {0,3,5}, degree = 5}
+10
+> a:play{mask = {0,3,5}, degree = 6}
+10
+> a:play{mask = {0,3,5}, degree = 7}
+10
+> a:play{mask = {0,3,5}, degree = 8}
+22
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 2}
+0
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 5}
+0
+> a:play{mask = {1,7}, degree = 6}
+0
+> a:play{mask = {1,7}, degree = 7}
+0
+> a:play{mask = {1,7}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:142: ')' expected (to close '(' at line 141) near 'end'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 9}
+12
+> a:play{mask = {1,3,5}, degree = 10}
+16
+> a:play{mask = {1,3,5}, degree = 11}
+16
+> a:play{mask = {1,3,5}, degree = 12}
+19
+> a:play{mask = {1,3,5}, degree = 13}
+19
+> a:play{mask = {1,3,5}, degree = 14}
+24
+> a:play{mask = {1,3,5}, degree = 15}
+24
+> a:play{mask = {1,3,5}, degree = 16}
+24
+> a:play{mask = {1,3,5}, degree = 17}
+28
+> a:play{mask = {1,3,5}, degree = 18}
+28
+> a:play{mask = {1,3,5}, degree = 19}
+31
+> a:play{mask = {1,3,5}, degree = 20}
+31
+> a:play{mask = {1,3,5}, degree = 21}
+36
+> a:play{mask = {1,3,5}, degree = 22}
+36
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {3,1,5}, degree = 1}
+0
+> a:play{mask = {3,1,5}, degree = 2}
+4
+> a:play{mask = {3,1,5}, degree = 3}
+4
+> a:play{mask = {3,1,5}, degree = 4}
+4
+> a:play{mask = {3,1,5}, degree = 5}
+7
+> a:play{mask = {3,1,5}, degree = 6}
+7
+> a:play{mask = {3,1,5}, degree = 7}
+12
+> a:play{mask = {3,1,5}, degree = 8}
+12
+> a:play{mask = {3,1,5}, degree = 9}
+16
+> a:play{mask = {3,1,5}, degree = 10}
+16
+> a:play{mask = {5,3,1}, degree = 10}
+16
+> a:play{mask = {5,3,1}, degree = 1}
+0
+> a:play{mask = {5,3,1}, degree = 2}
+4
+> a:play{mask = {5,3,1}, degree = 3}
+4
+> a:play{mask = {5,3,1}, degree = 4}
+7
+> a:play{mask = {5,3,1}, degree = 5}
+7
+> a:play{mask = {5,3,1}, degree = 6}
+7
+> a:play{mask = {5,3,1}, degree = 7}
+12
+> a:play{mask = {5,3,1}, degree = 8}
+12
+> a:play{mask = {8,3,5}, degree = 8}
+12
+> a:play{mask = {8,3,5}, degree = 1}
+0
+> a:play{mask = {8,3,5}, degree = 2}
+0
+> a:play{mask = {9,3,5}, degree = 2}
+2
+> a:play{mask = {9,3,5}, degree = 1}
+2
+> a:play{mask = {9,3,5}, degree = 2}
+2
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {10,3}, degree = 1}
+4
+> a:play{mask = {10,3}, degree = 10}
+16
+> a:play{mask = {10,3}, degree = 1}
+4
+> a:play{mask = {1,3}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 5}
+22
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 2}
+0
+> 
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 5}
+22
+> a:play{mask = {1,7}, degree = 6}
+22
+> a:play{mask = {1,7}, degree = 7}
+22
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 2}
+0
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 5}
+22
+> 
+> 
+> a:play{mask = {1,7}, degree = 5}
+22
+> a:play{mask = {1,7}, degree = 5}
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,7}, degree =7}
+22
+> a:play{mask = {1,7}, degree = 7}
+22
+> a:play{mask = {1,7}, degree = 7}
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a  =Vox:new()
+> a:play{mask = {1,3,5,7},degree =1}
+vox_object.lua:140: attempt to perform arithmetic on a nil value (global 'highest_val')
+stack traceback:
+	vox_object.lua:140: in function <vox_object.lua:103>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask = {1,3,5,7},degree =1}
+vox_object.lua:140: attempt to perform arithmetic on a nil value (global 'highest_val')
+stack traceback:
+	vox_object.lua:140: in function <vox_object.lua:103>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5,7}, degree = 1}
+0
+> a:play{mask = {1,3,5,7}, degree = 7}
+22
+> a:play{mask = {1,3,5,7}, degree = 6}
+7
+> a:play{mask = {1,3,5,6}, degree = 6}
+9
+> a:play{mask = {1,3,5,6}, degree = 7}
+9
+> a:play{mask = {1,3,5,6}, degree = 8}
+12
+> a:play{mask = {1,3,5,6}, degree = 1}
+0
+> a:play{mask = {1,3,5,6}, degree = 3}
+4
+> a:play{mask = {1,3,5,6}, degree = 4}
+4
+> a:play{mask = {1,3,5,6}, degree = 4}
+4
+> a:play{mask = {16}, degree = 4}
+2
+> a:play{mask = {1,6}, degree = 4}
+9
+> a:play{mask = {1,6}, degree = 9}
+12
+> a:play{mask = {1,6}, degree = 7}
+9
+> a:play{mask = {7}, degree = 7}
+22
+> a:play{mask = {7}, degree = 1}
+22
+> a:play{mask = {7}, degree = 67}
+130
+> a:play{mask = {7}, degree = 1}
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {7}, degree = 1}
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 1}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 2}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 3}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 4}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 5}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 5}
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a  =Vox:new()
+> a:play{mask = {1,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> os.eixt()
+stdin:1: field 'eixt' is not callable (a nil value)
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,3,5}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 6}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 8}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = §}
+stdin:1: unexpected symbol near '<\194>'
+> a:play{mask = {1,7}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,7}, degree = 6}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,7}, degree = 67
+>> a:play{mask = {1,7}, degree = 7}
+stdin:2: '}' expected (to close '{' at line 1) near 'a'
+> 
+> a:play{mask = {1,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,7}, degree = 8}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 2}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {7}, degree = 2}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {7}, degree = 10}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {7}, degree = 1}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,3,5,7}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,3,5,7}, degree = 2}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,3,5,7}, degree = 3}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	0
+4
+> a:play{mask = {1,3,5,7}, degree = 4}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	0
+4
+> a:play{mask = {1,3,5,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	0
+7
+> a:play{mask = {1,3,5,7}, degree = 6}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	0
+7
+> a:play{mask = {1,3,5,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,3,5,7}, degree = 8}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,3,5,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {7}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {7}, degree = 1}
+10
+> a:play{mask = {7}, degree = 4}
+10
+> a:play{mask = {7}, degree = 7}
+10
+> a:play{mask = {7}, degree = 8}
+22
+> a:play{mask = {7}, degree = 7}
+10
+> a:play{mask = {7}, degree = 8}
+22
+> a:play{mask = {7}, degree = 9}
+22
+> a:play{mask = {7}, degree = 10}
+22
+> a:play{mask = {7}, degree = 11}
+22
+> a:play{mask = {7}, degree = 12}
+22
+> a:play{mask = {7}, degree = 13}
+22
+> a:play{mask = {7}, degree = 14}
+22
+> a:play{mask = {7}, degree = 15}
+34
+> a:play{mask = {7}, degree = 15}
+34
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {7}, degree = 1}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	7
+94
+> a:play{mask = {7}, degree = 1}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	7
+94
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {7}, degree = 1}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {7}, degree = 2}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {7}, degree = 3}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {7}, degree = 7}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {7}, degree = 8}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {7}, degree = 8}
+
+key	1	val	7
+val	7
+closest_val	7
+lowest_val	7
+highest_val	14
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,7}, degree = 8}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 9}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 10}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 11}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,7}, degree = 12}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 13}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,7}, degree = 14}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,3,5,7}, degree = 14}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,3,5,7}, degree = 11}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	1
+16
+> a:play{mask = {1,3,5,7}, degree = 12}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	1
+19
+> a:play{mask = {1,3,5,7}, degree = 13}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	1
+19
+> a:play{mask = {1,3,5,7}, degree = 14}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,3,5,7}, degree = 15}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	2
+24
+> a:play{mask = {1,3,5,7}, degree = 16}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	2
+24
+> a:play{mask = {1,3,5,7}, degree = 17}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	2
+28
+> a:play{mask = {1,3,5,7}, degree = 18}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	2
+28
+> a:play{mask = {1,3,5,7}, degree = 11}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	1
+16
+> a:play{mask = {1,3,5,7}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,3,5,7}, degree = 2}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> a:play{mask = {1,3,5,7}, degree = 3}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	0
+4
+> a:play{mask = {1,3,5,7}, degree = 3}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	0
+4
+> a:play{mask = {1,3,5,7}, degree = 4}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	0
+4
+> a:play{mask = {1,3,5,7}, degree = 5}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	0
+7
+> a:play{mask = {1,3,5,7}, degree = 6}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	0
+7
+> a:play{mask = {1,3,5,7}, degree = 7}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	0
+10
+> a:play{mask = {1,3,5,7}, degree = 8}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,3,5,7}, degree = 9}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	1
+12
+> a:play{mask = {1,3,5,7}, degree = 11}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	3
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	3
+lowest_val	1
+highest_val	8
+closest_val	3
+args.ix	3
+args.octave	1
+16
+> a:play{mask = {1,3,5,7}, degree = 12}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	1
+19
+> a:play{mask = {1,3,5,7}, degree = 13}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	5
+lowest_val	1
+highest_val	8
+closest_val	5
+args.ix	5
+args.octave	1
+19
+> a:play{mask = {1,3,5,7}, degree = 114}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	16
+192
+> a:play{mask = {1,3,5,7}, degree = 14}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	3
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	5
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	7
+lowest_val	1
+highest_val	8
+closest_val	7
+args.ix	7
+args.octave	1
+22
+> a:play{mask = {1,3,5,7}, degree = 15}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	2
+24
+> a:play{mask = {1,3,5,7}, degree = 1}
+
+key	1	val	1
+val	1
+closest_val	1
+lowest_val	1
+key	2	val	3
+val	3
+closest_val	1
+lowest_val	1
+key	3	val	5
+val	5
+closest_val	1
+lowest_val	1
+key	4	val	7
+val	7
+closest_val	1
+lowest_val	1
+highest_val	8
+closest_val	1
+args.ix	1
+args.octave	0
+0
+> os.exit()
+davidlovell@DL vox_object % 
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a=Vox:new()
+> a:play()
+0
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+5
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+9
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+12
+> a:play{mask = {1,3,5,7}, degree = 8}
+12
+> a:play{mask = {1,3,5,7}, degree = 7}
+10
+> a:play{mask = {1,3,5,7}, degree = 6}
+7
+> a:play{mask = {1,5,7}, degree = 6}
+7
+> a:play{mask = {1,5,7}, degree = 7}
+10
+> a:play{mask = {1,5,7}, degree = 8}
+12
+> a:play{mask = {1,5,7}, degree = 1}
+0
+> a:play{mask = {1,5,7}, degree = 2}
+0
+> a:play{mask = {1,5,7}, degree = 3}
+0
+> a:play{mask = {1,5,7}, degree = 4}
+7
+> a:play{mask = {1,5,7}, degree = 5}
+7
+> a:play{mask = {1,5,7}, degree = 6}
+7
+> a:play{mask = {1,5,7}, degree = 7}
+10
+> a:play{mask = {1,5,7}, degree = 8}
+12
+> a:play{mask = {1,5,7}, degree = 9}
+12
+> a:play{mask = {1,5,7}, degree = 10}
+12
+> a:play{mask = {1,5,7}, degree = 11}
+19
+> a:play{mask = {1,5,7}, degree = 12}
+19
+> a:play{mask = {1,5,7}, degree = 13}
+19
+> a:play{mask = {1,5,7}, degree = 14}
+22
+> a:play{mask = {1,5,7}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {3,5,7}}
+> a:play{degree = 1}
+4
+> a:play{degree = 2}
+4
+> a:play{degree = 0}
+-2
+> a:play{degree = 1}
+4
+> a:play{degree = 2}
+4
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+7
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+16
+> a:play{degree = 9}
+16
+> a:play{degree = 10}
+16
+> a:play{degree = 11}
+16
+> a:play{degree = 112}
+190
+> a:play{degree = 12}
+19
+> a:play{degree = 1}
+4
+> a:play{degree = 0}
+-2
+> a:play{degree = 1}
+4
+> a:play{degree = 2}
+4
+> a:play{degree = 2}
+4
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> a:play{mask = {4,6,8}, degree = 1}
+0
+> a:play{mask = {4,6,8}, degree = 2}
+0
+> a:play{mask = {4,6,8}, degree = 3}
+5
+> a:play{mask = {4,6,8}, degree = 4}
+5
+> a:play{mask = {4,6,8}, degree = 5}
+5
+> a:play{mask = {4,6,8}, degree = 6}
+9
+> a:play{mask = {4,6,8}, degree = 7}
+9
+> a:play{mask = {4,6,8}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1
+>> a:play{mask = {1,3,5}, degree = 1}
+stdin:2: '}' expected (to close '{' at line 1) near 'a'
+> a:play{mask = {1,3,5}, degree = 1                        a:play{mask = {1,3,5}, degree = 1}
+stdin:2: '}' expected (to close '{' at line 1) near 'a'
+> a:play{mask = {1,3,5}, degree = 1}                       0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 9}
+12
+> a:play{mask = {1,3,5}, degree = 10}
+16
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+math.abs(val - args.ix)	0
+math.abs(closest_val - args.ix)	0
+math.abs(val - args.ix)	2
+math.abs(closest_val - args.ix)	0
+math.abs(val - args.ix)	4
+math.abs(closest_val - args.ix)	0
+0
+> a:play{mask = {1,3,5}, degree = 2}
+math.abs(val - args.ix)	1
+math.abs(closest_val - args.ix)	1
+math.abs(val - args.ix)	1
+math.abs(closest_val - args.ix)	1
+math.abs(val - args.ix)	3
+math.abs(closest_val - args.ix)	1
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a  =Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+current_diff	0
+closest_diff	0
+<	false
+current_diff	2
+closest_diff	0
+<	false
+current_diff	4
+closest_diff	0
+<	false
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}}
+current_diff	0
+closest_diff	0
+<=	true
+current_diff	2
+closest_diff	0
+<=	false
+current_diff	4
+closest_diff	0
+<=	false
+0
+> a:play{mask = {1,3,5}, degree =1}
+current_diff	0
+closest_diff	0
+<=	true
+current_diff	2
+closest_diff	0
+<=	false
+current_diff	4
+closest_diff	0
+<=	false
+0
+> a:play{mask = {1,3,5}, degree =2}
+current_diff	1
+closest_diff	1
+<=	true
+current_diff	1
+closest_diff	1
+<=	true
+current_diff	3
+closest_diff	1
+<=	false
+4
+> a:play{mask = {1,3,5}, degree =3}
+current_diff	2
+closest_diff	2
+<=	true
+current_diff	0
+closest_diff	2
+<=	true
+current_diff	2
+closest_diff	0
+<=	false
+4
+> a:play{mask = {1,3,5}, degree =4}
+current_diff	3
+closest_diff	3
+<=	true
+current_diff	1
+closest_diff	3
+<=	true
+current_diff	1
+closest_diff	1
+<=	true
+7
+> a:play{mask = {1,3,5}, degree =5}
+current_diff	4
+closest_diff	4
+<=	true
+current_diff	2
+closest_diff	4
+<=	true
+current_diff	0
+closest_diff	2
+<=	true
+7
+> a:play{mask = {1,3,5}, degree =6}
+current_diff	5
+closest_diff	5
+<=	true
+current_diff	3
+closest_diff	5
+<=	true
+current_diff	1
+closest_diff	3
+<=	true
+7
+> a:play{mask = {1,3,5}, degree =7}
+current_diff	6
+closest_diff	6
+<=	true
+current_diff	4
+closest_diff	6
+<=	true
+current_diff	2
+closest_diff	4
+<=	true
+7
+> a:play{mask = {1,3,5}, degree =8}
+current_diff	0
+closest_diff	0
+<=	true
+current_diff	2
+closest_diff	0
+<=	false
+current_diff	4
+closest_diff	0
+<=	false
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:133: unexpected symbol near ')'
+davidlovell@DL vox_object % os.exit()
+function> lua -i 'vox_object.lua'
+davidlovell@DL vox_object % a = Vox:new()
+function>  
+function> 
+function> 
+function> os.exit()
+function function> 
+function function> exit
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}}
+current_diff	7
+closest_diff	7
+<	false
+current_diff	2
+closest_diff	7
+<	true
+current_diff	4
+closest_diff	7
+<	true
+0
+> a:play{mask = {1,3,5}, degree = 1}
+current_diff	7
+closest_diff	7
+<	false
+current_diff	2
+closest_diff	7
+<	true
+current_diff	4
+closest_diff	7
+<	true
+0
+> a:play{mask = {1,3,5}, degree = 2}
+current_diff	6
+closest_diff	6
+<	false
+current_diff	1
+closest_diff	6
+<	true
+current_diff	3
+closest_diff	6
+<	true
+0
+> a:play{mask = {1,3,5}, degree = 3}
+current_diff	5
+closest_diff	5
+<	false
+current_diff	7
+closest_diff	5
+<	false
+current_diff	2
+closest_diff	7
+<	true
+4
+> a:play{mask = {1,3,5}, degree = 4}
+current_diff	4
+closest_diff	4
+<	false
+current_diff	6
+closest_diff	4
+<	false
+current_diff	1
+closest_diff	6
+<	true
+4
+> a:play{mask = {1,3,5}, degree = 1}
+current_diff	7
+closest_diff	7
+<	false
+current_diff	2
+closest_diff	7
+<	true
+current_diff	4
+closest_diff	7
+<	true
+0
+> a:play{mask = {1,3,5}, degree = 2}
+current_diff	6
+closest_diff	6
+<	false
+current_diff	1
+closest_diff	6
+<	true
+current_diff	3
+closest_diff	6
+<	true
+0
+> a:play{mask = {1,3,5}, degree = 3}
+current_diff	5
+closest_diff	5
+<	false
+current_diff	7
+closest_diff	5
+<	false
+current_diff	2
+closest_diff	7
+<	true
+4
+> a:play{mask = {1,3,5}, degree = 4}
+current_diff	4
+closest_diff	4
+<	false
+current_diff	6
+closest_diff	4
+<	false
+current_diff	1
+closest_diff	6
+<	true
+4
+> a:play{mask = {1,3,5}, degree = 5}
+current_diff	3
+closest_diff	3
+<	false
+current_diff	5
+closest_diff	3
+<	false
+current_diff	7
+closest_diff	5
+<	false
+7
+> a:play{mask = {1,3,5}, degree = 6}
+current_diff	2
+closest_diff	2
+<	false
+current_diff	4
+closest_diff	2
+<	false
+current_diff	6
+closest_diff	4
+<	false
+7
+> a:play{mask = {1,3,5}, degree = 7}
+current_diff	1
+closest_diff	1
+<	false
+current_diff	3
+closest_diff	1
+<	false
+current_diff	5
+closest_diff	3
+<	false
+7
+> a:play{mask = {1,3,5}, degree = 8}
+current_diff	7
+closest_diff	7
+<	false
+current_diff	2
+closest_diff	7
+<	true
+current_diff	4
+closest_diff	7
+<	true
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:132: unexpected symbol near ')'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,3,5}}
+4
+> a:play{mask = {1,3,5}, degree = 1}
+4
+> a:play{mask = {1,3,5}, degree = 2}
+4
+> a:play{mask = {1,3,5}, degree = 3}
+7
+> a:play{mask = {1,3,5}, degree = 4}
+7
+> a:play{mask = {1,3,5}, degree = 5}
+0
+> a:play{mask = {1,3,5}, degree = 6}
+0
+> a:play{mask = {1,3,5}, degree = 7}
+0
+> a:play{mask = {1,3,5}, degree = 8}
+16
+> a:play{mask = {1,3,5}, degree = 1}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,5}}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,3,7}, degree = 1}
+0
+> a:play{mask = {1,3,7}, degree = 2}
+0
+> a:play{mask = {1,3,7}, degree = 3}
+4
+> a:play{mask = {1,3,7}, degree = 4}
+4
+> a:play{mask = {1,3,7}, degree = 5}
+4
+> a:play{mask = {1,3,7}, degree = 6}
+10
+> a:play{mask = {1,3,7}, degree = 7}
+10
+> a:play{mask = {1,3,7}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 7}
+10
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 7}
+10
+> a:play{mask = {1,7}, degree = 6}
+10
+> a:play{mask = {1,7}, degree = 5}
+10
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 2}
+0
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 5}
+10
+> a:play{mask = {1,7}, degree = 6}
+10
+> a:play{mask = {1,7}, degree = 7}
+10
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 9}
+12
+> a:play{mask = {1,7}, degree = 10}
+12
+> a:play{mask = {1,7}, degree = 11}
+12
+> a:play{mask = {1,7}, degree = 12}
+22
+> a:play{mask = {1,7}, degree = 13}
+22
+> a:play{mask = {1,7}, degree = 14}
+22
+> a:play{mask = {1,7}, degree = 15}
+24
+> a:play{mask = {1,7}, degree = 16}
+24
+> a:play{mask = {1,7}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}}
+0
+> a:play{mask = {1,3,9}, degree = 2}
+2
+> a:play{mask = {1,3,9}, degree = 1}
+0
+> a:play{mask = {1,3,9}, degree = 2}
+2
+> a:play{mask = {1,3,9}, degree = 3}
+4
+> a:play{mask = {1,3,9}, degree = 4}
+4
+> a:play{mask = {1,3,9}, degree = 5}
+4
+> a:set{mask = {1,3,5}}
+> a:play{degree = 2}
+0
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+7
+> a.mask = nil
+> a:play{degree = 5}
+7
+> a:play{degree = 4}
+5
+> a:play{degree = 3}
+4
+> a:set{mask = {1,3,5}, degree = 2}
+> a:set{mask = {1,3,5}, degree = 3}
+> a:play()
+4
+> a:set{mask = nil, degree = 1}
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:set{mask {1,3,5}, degree = 7}
+attempt to index a nil value
+stack traceback:
+	[C]: in for iterator 'for iterator'
+	vox_object.lua:24: in function 'mask'
+	stdin:1: in main chunk
+	[C]: in ?
+> a:set{mask {1,3,5}, degree = 7}
+attempt to index a nil value
+stack traceback:
+	[C]: in for iterator 'for iterator'
+	vox_object.lua:24: in function 'mask'
+	stdin:1: in main chunk
+	[C]: in ?
+> a:set{mask {1,3,5}, degree = 1}
+attempt to index a nil value
+stack traceback:
+	[C]: in for iterator 'for iterator'
+	vox_object.lua:24: in function 'mask'
+	stdin:1: in main chunk
+	[C]: in ?
+> a:set{mask {1,3,5}, degree = 2}
+attempt to index a nil value
+stack traceback:
+	[C]: in for iterator 'for iterator'
+	vox_object.lua:24: in function 'mask'
+	stdin:1: in main chunk
+	[C]: in ?
+> a:set{mask = {1,3,5}, degree = 2}
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,3,5}, degree = 5}
+> a:play()
+vox_object.lua:130: attempt to perform arithmetic on a nil value (field 'ix')
+stack traceback:
+	vox_object.lua:130: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{degree = 3}
+4
+> a:play{degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 6}
+7
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3,5}, degree = 8}
+12
+> a:play{mask = {1,3,5}, degree = 7}
+7
+> a:play{mask = {1,3}, degree = 7}
+4
+> a:play{mask = {1,3}, degree = 8}
+12
+> a:play{mask = {1,3}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2}, degree = 5}
+> a:play()
+2
+> a:play{degree = 6}
+14
+> a:play{degree = 5}
+14
+> a:play{degree = 4}
+12
+> a:play{degree = 1}
+2
+> a:play{degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{degree = 1}
+2
+> a.degree = 1
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a.mask = {1,2,3}
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+12
+> a:play{degree = 1}
+0
+> a.mask = {1,2}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+2
+> a:play{degree = 4}
+2
+> a:play{degree = 5}
+2
+> a:play{degree = 6}
+2
+> a:play{degree = 7}
+2
+> a:play{degree = 8}
+12
+> a:play{degree = 9}
+14
+> a:play{degree = 1}
+0
+> a.mask = {1,3,5,7}
+> a:play()
+0
+> a:play{degree = 1}
+0
+> a:play{degree = 9}
+12
+> a:play{degree = 8}
+12
+> a:play{degree = 7}
+10
+> a:play{degree = 6}
+7
+> a:play{degree = 5}
+7
+> a:play{degree = 4}
+4
+> a:play{degree = 3}
+4
+> a:play{degree = 2}
+0
+> a:play{degree = 1}
+0
+> a.mask  = {1,7}
+> a:play{degree = 1}
+0
+> a:play{degree = 6}
+10
+> a:play{degree = 7}
+10
+> a:play{degree = 5}
+10
+> a:play{degree = 4}
+0
+> a:play{degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:set{mask = {1,7}}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+0
+> a:play{degree = 3}
+0
+> a:play{degree = 4}
+0
+> a:play{degree = 5}
+10
+> a:play{degree = 6}
+10
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+12
+> a:play{degree = 1}
+0
+> a.mask = nil
+> a:play{mask = {1}, degree = 1}
+0
+> a:play{mask = {1}, degree = 2}
+0
+> a:play{mask = {1}, degree = 3}
+0
+> a:play{mask = {1}, degree = 4}
+0
+> a:play{mask = {1}, degree = 5}
+0
+> a:play{mask = {1}, degree = 6}
+0
+> a:play{mask = {1}, degree = 7}
+0
+> a:play{mask = {1}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 7}
+10
+> a:play{mask = {1,7}, degree = 6}
+10
+> a:play{mask = {1,7}, degree = 5}
+10
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 1}
+0
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 2}
+0
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 3}
+3
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 4}
+3
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 5}
+3
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 6}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 7}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 8}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 9}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 10}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 11}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 12}
+7
+> a:play{scale = chromatic, mask = {1,4,8}, degree = 13}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,7}, degree = 1}
+0
+> a:play{mask = {1,7}, degree = 2}
+0
+> a:play{mask = {1,7}, degree = 3}
+0
+> a:play{mask = {1,7}, degree = 4}
+0
+> a:play{mask = {1,7}, degree = 5}
+10
+> a:play{mask = {1,7}, degree = 6}
+10
+> a:play{mask = {1,7}, degree = 7}
+10
+> a:play{mask = {1,7}, degree = 8}
+12
+> a:play{mask = {1,7}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+0
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2}, degree = 7}
+12
+> a:play{mask = {1,2}, degree = 6}
+12
+> a:play{mask = {1,2}, degree = 5}
+2
+> a:play{mask = {1,2}, degree = 4}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> a:play{mask = {1,2}, degree = 2}
+2
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 0}
+0
+> a:play{mask = {1,2}, degree = -1}
+0
+> a:play{mask = {1,2}, degree = -2}
+-10
+> a:play{mask = {1,2}, degree = -3}
+-10
+> a:play{mask = {1,2}, degree = -4}
+-10
+> a:play{mask = {1,2}, degree = -5}
+-10
+> a:play{mask = {1,2}, degree = -6}
+-12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = 1,4,5}
+> a:play{degree = 1}
+vox_object.lua:126: attempt to get length of a number value (field 'mask')
+stack traceback:
+	vox_object.lua:126: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> a:play{degree = 1}
+vox_object.lua:126: attempt to get length of a number value (field 'mask')
+stack traceback:
+	vox_object.lua:126: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{1,3,5}
+> a:play()
+0
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 2}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2()
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2()
+0
+> a:play2{mask = {1}, degree = 2}
+0
+> a:play2{mask = {1}, degree = 3}
+0
+> a:play2{mask = {1}, degree = 4}
+0
+> a:play2{mask = {1}, degree = 5}
+12
+> a:play2{mask = {1}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2()
+0
+> a:play2{mask = {1}, degree = 1}
+0
+> a:play2{mask = {1}, degree = 2}
+0
+> a:play2{mask = {1}, degree = 3}
+0
+> a:play2{mask = {1}, degree = 4}
+0
+> a:play2{mask = {1}, degree = 5}
+24
+> a:play2{mask = {1}, degree = 6}
+24
+> a:play2{mask = {1}, degree = 7}
+24
+> a:play2{mask = {1}, degree = 1}
+0
+> a:play{mask = {1}, degree = 1}
+0
+> a:play{mask = {1}, degree = 5}
+12
+> a:play{mask = {1}, degree = 5}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2{mask = {1}, degree = 5}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> a:play2{mask = {1,2,3}, degree =1}
+0
+> a:play2{mask = {1,2,3}, degree =2}
+2
+> a:play2{mask = {1,2,3}, degree =3}
+4
+> a:play2{mask = {1,2,3}, degree =4}
+4
+> a:play2{mask = {1,2,3}, degree =5}
+4
+> a:play2{mask = {1,2,3}, degree =6}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2{}
+0
+> a:play2{mask = {1,2,3}, degree = 5}
+4
+> a:play2{mask = {1,2,3}, degree = 5}
+4
+> a:play2{mask = {1,2,3}, degree = 6}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2()
+0
+> a:play2{mask = {1,2,3}, degree = 6}
+vox_object.lua:172: attempt to index a nil value (local 'args')
+stack traceback:
+	vox_object.lua:172: in field 'apply_mask'
+	vox_object.lua:161: in function <vox_object.lua:146>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play2{mask = {1,2,3}, degree = 6}
+12
+> a:play2{mask = {1,2,3}, degree = 5}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> a:play{}
+0
+> a:play{mask = {1,2,3}, degree =5}
+2
+> a:play{mask = {1,2,3}, degree =6}
+12
+> a:play{mask = {1,2,3}, degree =5}
+2
+> a:play{mask = {1,2,3}, degree =1}
+-5
+> a:play{mask = {1,2,3}, degree =2}
+-2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a =Vox:new{}
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> a:play{negharm = true}
+7
+> a:play{negharm = true, degree = 1}
+7
+> a:play{negharm = true, degree = 2}
+5
+> a:play{negharm = true, degree = 3}
+3
+> a:play{negharm = true, degree = 4}
+2
+> a:play{negharm = true, degree = 5}
+0
+> a:play{negharm = true, mask = {1,3,5}, degree = 5}
+0
+> a:play{negharm = true, mask = {1,3,5}, degree = 1}
+7
+> a:play{negharm = true, mask = {1,3,5}, degree = 2}
+7
+> a:play{negharm = true, mask = {1,3,5}, degree = 3}
+3
+> a:play{negharm = true, mask = {1,3,5}, degree = 4}
+3
+> a:play{negharm = true, mask = {1,3,5}, degree = 5}
+0
+> a:play{negharm = true, mask = {1,3,5}, degree = 4}
+3
+> a:play{negharm = false, mask = {1,3,5}, degree = 4}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:144: attempt to perform arithmetic on a nil value (local 'degree')
+stack traceback:
+	vox_object.lua:144: in field 'apply_wrap'
+	vox_object.lua:121: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:127: field 'synth' is not callable (a nil value)
+stack traceback:
+	vox_object.lua:127: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0	7	0.0
+0
+> a:play{mask = {1,2,3}, degree = 4}
+2	7	0.28571428571429
+4
+> a:play{mask = {1,2,3}, degree = 5}
+2	7	0.28571428571429
+4
+> a:play{mask = {1,2,3}, degree = 6}
+7	7	1.0
+12
+> a:play{mask = {1,2,3}, degree = 7}
+7	7	1.0
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0	7	0.0
+0
+> a:play{mask = {1,2,3}, degree = 9}
+1	7	0.14285714285714
+2
+> a:play{mask = {1,2,3}, degree = 1}
+0	7	0.0
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degeree = 5}
+0
+> a:play{mask = {1,2,3}, degeree = 6}
+0
+> a:play{mask = {1,2,3}, degeree = 7}
+0
+> a:play{mask = {1,2,3}, degeree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,2,3}, degree = }
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> a:play{mask = {1,2,3}, degree = 10}
+4
+> a:play{mask = {1,2,3}, degree = 11}
+4
+> a.wrap
+nil
+> a.wrap = false
+> a:play{mask = {1,2,3}, degree = 11}
+4
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> a:play{mask = {1,2,3}, degree = 10}
+4
+> b:new()
+stdin:1: attempt to index a nil value (global 'b')
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> b = Vox:new()
+> b.wrap
+nil
+> b.mask
+nil
+> b.negharm
+nil
+> b.transpose
+0
+> b:set(wrap = false)
+stdin:1: ')' expected near '='
+> b:set{wrap = false}
+> b.wrap
+false
+> b.synth
+function: 0x7fb7c9707f00
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.mask
+nil
+> a.wrap
+nil
+> a.negharm
+nil
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.wrap
+nil
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.wrap
+false
+> b = n == nil and false or n
+> b
+nil
+> b = (n == nil) and false or n
+> b
+nil
+> b = (n == nil) and n or false
+> b
+false
+> n = true
+> b = (n == nil) and n or false
+> b
+false
+> n == nil
+false
+> n == nil
+false
+> n = nil
+> n == nil
+true
+> n = nil
+> b = (n == nil) and false or n
+> b
+nil
+> if n == nil then print(n) end
+nil
+> n == true
+false
+> n = true
+> n == true
+true
+> n = true
+> if n == nil then print(n) end
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.negharm
+nil
+> b = nil
+> a = b == nil and true or b
+> a
+true
+> a = b == nil and false or b
+> a = b == nil and false or b
+> a
+nil
+> a = b ~= nil and b or false
+> a
+false
+> b = true
+> a
+false
+> b = true
+> a = b ~= nil and b or false
+> a
+true
+> b = false
+> a = b ~= nil and b or false
+> a
+false
+> b = true
+> a = b ~= nil and b or false
+> a
+true
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0	7	0.0
+0
+> a:play{degree = 7}
+6	7	0.85714285714286
+10
+> a:play{degree = 8}
+7	7	1.0
+12
+> a:play{degree = 9}
+8	7	1.1428571428571
+14
+> a:play{degree = 1}
+0	7	0.0
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0	7	0.0
+0
+> a:play{mask = {1,2,3}, degree = 8}
+0	7	0.0
+0
+> a:play{mask = {1,2,3}, degree = 9}
+1	7	0.14285714285714
+2
+> a:play{mask = {1,2,3}, degree = 7}
+7	7	1.0
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0	7	0.0
+0
+> a.wrap
+false
+> a:play{degree = 8}
+7	7	1.0
+12
+> a:play{degree = 9}
+8	7	1.1428571428571
+14
+> a:play{degree = 10}
+9	7	1.2857142857143
+16
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+14
+> a:play{mask = {1,2,3}, degree =7}
+14
+> a:play{mask = {1,2,3}, degree =8}
+0
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,2,3}, degree =2}
+2
+> a:play{mask = {1,2,3}, degree =3}
+4
+> a:play{mask = {1,2,3}, degree =4}
+4
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:120: unexpected symbol near ')'
+davidlovell@DL vox_object % os.exit()
+function>  
+function> lua -i 'vox_object.lua'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+vox_object.lua:127: attempt to perform arithmetic on a nil value (local 'val')
+stack traceback:
+	vox_object.lua:127: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play
+>> 
+>> ()
+vox_object.lua:134: attempt to get length of a nil value (local 'mask')
+stack traceback:
+	vox_object.lua:134: in field 'apply_mask'
+	vox_object.lua:120: in method 'play'
+	stdin:1: in main chunk
+	[C]: in ?
+> a:play()
+vox_object.lua:134: attempt to get length of a nil value (local 'mask')
+stack traceback:
+	vox_object.lua:134: in field 'apply_mask'
+	vox_object.lua:120: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> a:play{mask {1,2,3}, degree =1}
+attempt to index a nil value
+stack traceback:
+	[C]: in for iterator 'for iterator'
+	vox_object.lua:24: in function 'mask'
+	stdin:1: in main chunk
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:134: attempt to get length of a nil value (local 'mask')
+stack traceback:
+	vox_object.lua:134: in field 'apply_mask'
+	vox_object.lua:120: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> a:play{mask = {1,2,3}, degree = 10}
+4
+> a:play{mask = {1,2,3}, degree = 11}
+4
+> a:play{mask = {1,2,3}, degree = 12}
+4
+> a:play{mask = {1,2,3}, degree = 13}
+12
+> a:play{mask = {1,2,3}, degree = 14}
+12
+> a:play{mask = {1,2,3}, degree = 15}
+0
+> a:play{mask = {1,2,3}, degree = 16}
+2
+> os.exit
+function: 0x103e7ca00
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:122: 'then' expected near 'mask_degree'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+vox_object.lua:126: attempt to perform arithmetic on a nil value (local 'mask_octave')
+stack traceback:
+	vox_object.lua:126: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+24
+> a:play{mask = {1,2,3}, degree =7}
+24
+> a:play{mask = {1,2,3}, degree =8}
+0
+> a:play{mask = {1,2,3}, degree =9}
+2
+> os.exit()
+davidlovell@DL vox_object % a = Vox:new()
+function> 
+function> 
+function> 
+function> lua -i 'vox_object.lua'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> a:play{degree =1}
+0
+> a.negharm
+nil
+> a.wrap
+nil
+> a:paly{mask = {1,2,3}, degree = 1}
+stdin:1: method 'paly' is not callable (a nil value)
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,2,3}, degree =6}
+12
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =8}
+12
+> a:play{mask = {1,2,3}, degree =9}
+14
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:115: unexpected symbol near '='
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.wrap
+false
+> a.negharm
+false
+> a.mask
+nil
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+12
+> a:play{mask = {1,2,3}, degree =7}
+12
+> a:play{mask = {1,2,3}, degree =8}
+12
+> a:play{mask = {1,2,3}, degree =9}
+14
+> a:play{mask = {1,2,3}, degree =10}
+16
+> a:play{mask = {1,2,3}, degree =11}
+16
+> a:play{mask = {1,2,3}, degree =12}
+16
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree =}
+stdin:1: unexpected symbol near '}'
+> a:play{mask = {1,2,3}, degree =5}
+7
+> a:play{mask = {1,2,3}, degree =6}
+21
+> a:play{mask = {1,2,3}, degree =1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree }
+0
+> a:play{degree =5}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+12
+> a:play{degree = 7}
+12
+> a:play{degree = 8}
+12
+> a:play{degree = 9}
+14
+> a:play{degree = 10}
+16
+> a:play{degree = 11}
+16
+> a:play{degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 6}
+vox_object.lua:149: attempt to perform arithmetic on a nil value (global 'octave')
+stack traceback:
+	vox_object.lua:149: in field 'apply_mask'
+	vox_object.lua:123: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 5}
+vox_object.lua:127: global 'apply_wrap' is not callable (a nil value)
+stack traceback:
+	vox_object.lua:127: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a= Vox:new{mask = {1,2,3}}
+> a:play{degree = 4}
+vox_object.lua:142: attempt to perform arithmetic on a nil value (global 'degree')
+stack traceback:
+	vox_object.lua:142: in field 'apply_mask'
+	vox_object.lua:121: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 5}
+9
+> a:play{degree = 4}
+7
+> a:play{degree = 3}
+5
+> a:play{degree = 1}
+2
+> a:play{degree = 1}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 5}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 7}
+24
+> a:play{degree = 6}
+24
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+24
+> a:play{degree = 7}
+24
+> a:play{degree = 8}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 7}
+12
+> a:play{degree = 6}
+12
+> a:play{degree = 5}
+4
+> a:play{degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{mask = {1,3,5}}
+> a:play{degree =1}
+0
+> a:play{degree =-1}
+-5
+> a:play{degree =-2}
+-5
+> a:play{degree =-3}
+-8
+> a:play{degree =-4}
+-8
+> a:play{degree = 1}
+0
+> a:play{mask = {1,5}, degree = 1}
+0
+> a:play{mask = {1,5}, degree = 2}
+0
+> a:play{mask = {1,5}, degree = 3}
+0
+> a:play{mask = {1,5}, degree = 4}
+7
+> a:play{mask = {1,5}, degree = 5}
+7
+> a:play{mask = {1,5}, degree = 6}
+7
+> a:play{mask = {1,5}, degree = 7}
+12
+> a:play{mask = {1,5}, degree = 8}
+12
+> a:play{mask = {1,5}, degree = 5}
+7
+> a:play{mask = {1,5}, degree = 15}
+24
+> a:play{mask = {1,5}, degree = 13}
+19
+> a:play{mask = {1,5}, degree = 12}
+19
+> a:play{mask = {1,5}, degree = 111}
+187
+> a:play{mask = {1,5}, degree = 11}
+19
+> a:play{mask = {1,5}, degree = 10}
+12
+> a:play{mask = {1,5}, degree = 9}
+12
+> a:play{mask = {1,5}, degree = 8}
+12
+> a:play{mask = {1,5}, degree = 7}
+12
+> a:play{mask = {1,5}, degree = 6}
+7
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{scale = penta_maj}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+7
+> a:play{degree = 5}
+9
+> a:play{degree = 6}
+12
+> a:play{degree = 7}
+14
+> a:play{degree = 1}
+0
+> a.scale = lydian
+> a:set{scale = lydian, mask = {1,3,5}}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+0
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+7
+> a:play{degree = 7}
+12
+> a:play{degree = 8}
+12
+> a:play{degree = 9}
+12
+> a:play{degree = 1}
+0
+> a:set{scale = mixolydian, mask = nil}
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:set{mask = {1,2,3}}
+> a.mask
+table: 0x7fb47d0043e0
+> a:reset()
+> a.mask
+nil
+> a = nil
+> dofile('vox_object')
+cannot open vox_object: No such file or directory
+stack traceback:
+	[C]: in function 'dofile'
+	stdin:1: in main chunk
+	[C]: in ?
+> dofile('vox_object.lua')
+> os.exit
+function: 0x103209a00
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> dofile('vox_object.lua')
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+12
+> a:play{degree = 7}
+12
+> a:play{degree = 8}
+12
+> a:play{degree = 9}
+14
+> a:play{degree = 1}
+0
+> a.scale = chromatic
+> a.mask = {1,3,5,6,8,10,11}
+> a:play{degree=1}
+0
+> a:play{degree=2}
+0
+> a:play{degree=3}
+2
+> a:play{degree=4}
+2
+> a:play{degree=5}
+4
+> a:play{degree=6}
+5
+> a:play{degree=7}
+5
+> a:play{degree=8}
+7
+> for k, v in pairs(a) do print(k,v) end
+on	true
+octave	0
+degree	1
+wrap	false
+synth	function: 0x7fd7e5e131e0
+negharm	false
+scale	table: 0x7fd7e5f07240
+seq	table: 0x7fd7e5e13200
+level	1
+transpose	0
+mask	table: 0x7fd7e5d05ed0
+> a = nil
+> for k, v in pairs(a) do print(k,v) end
+stdin:1: bad argument #1 to 'for iterator' (table expected, got nil)
+stack traceback:
+	[C]: in function 'next'
+	stdin:1: in main chunk
+	[C]: in ?
+> dofile 'vox_object.lua'
+> a = Vox:new{mask = {1,3,5,11}}
+> 11 - 7
+4
+> 9-7
+2
+> 11-7
+4
+> 13-7
+6
+> 15-7
+8
+> a:play{2}
+0
+> a:play{1}
+0
+> a:play{2}
+0
+> a:play{3}
+0
+> a:play{4}
+0
+> a:play{degree = 4}
+4
+> a = nil
+> dofile 'vox_object.lua'
+vox_object.lua:120: 'then' expected near '='
+stack traceback:
+	[C]: in function 'dofile'
+	stdin:1: in main chunk
+	[C]: in ?
+> dofile 'vox_object.lua'
+vox_object.lua:185: 'end' expected (to close 'function' at line 104) near <eof>
+stack traceback:
+	[C]: in function 'dofile'
+	stdin:1: in main chunk
+	[C]: in ?
+> dofile 'vox_object.lua'
+> a = Vox:new{}
+> a:play{5}
+9
+> a:play{4}
+7
+> a:play{1}
+2
+> a:play(1)
+vox_object.lua:108: attempt to index a number value (local 'args')
+stack traceback:
+	vox_object.lua:108: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> a = nil
+> dofile 'vox_object.lua'
+> a = Vox:new()
+> a:play()
+vox_object.lua:109: attempt to index a boolean value (local 'args')
+stack traceback:
+	vox_object.lua:109: in function <vox_object.lua:104>
+	(...tail calls...)
+	[C]: in ?
+> a = nil
+> dofile 'vox_object.lua'
+> a = Vox:new()
+> a:play{}
+0
+> a:play(1)
+0
+> a:play(2)
+2
+> a:play(3)
+4
+> a:play(4)
+5
+> a:play(5)
+7
+> a:play(6)
+9
+> a:play{1}
+0
+> a:play{2}
+0
+> a:play{3}
+0
+> a:play{4}
+0
+> a:play(1)
+0
+> a:play(7)
+10
+> a = nil
+> dofile 'vox_object.lua'
+> a = Vox:new()
+> a:play(1)
+0
+> a:play(2)
+2
+> a:play(3)
+4
+> a:play{1}
+0
+> a:play{2}
+0
+> a:play{3}
+0
+> a:play{4}
+0
+> a = nil
+> dofile 'vox_object.lua'
+> a = Vox:new{}
+> a:play()
+0
+> a:play(1)
+0
+> a:play(3)
+4
+> a:play(6)
+9
+> a:play{6}
+0
+> a:play{1}
+0
+> a:play(1)
+0
+> a = nil
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+9
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+12
+> a:play{degree = 10}
+16
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new(
+>> )
+> a                                                        table: 0x7f9ce2e04840
+> a:play()
+0
+> a:play{transpose = 1}
+1
+> a:play{transpose = 2}
+2
+> a:play{transpose = 3}
+3
+> a:play{transpose = 4}
+4
+> a:play{transpose = 5}
+5
+> a:play{transpose = 6}
+6
+> a:play{transpose = 7}
+7
+> a:{wrap = false, degree = 1}
+stdin:1: <name> expected near '{'
+> a:play{wrap = false, degree = 1}
+0
+> a:play{wrap = false, degree = 1}
+0
+> a:play{wrap = false, degree = 2}
+2
+> a:play{wrap = false, degree = 3}
+4
+> a:play{wrap = false, degree = 4}
+5
+> a:play{wrap = false, degree = 5}
+7
+> a:play{wrap = false, degree = 6}
+9
+> a:play{wrap = false, degree = 7}
+10
+> a:play{wrap = false, degree = 7}
+10
+> a:play{wrap = false, degree = 8}
+12
+> a:play{wrap = false, degree = 9}
+14
+> a:play{wrap = false, degree = 20}
+33
+> a:play{wrap = false, degree = 20}
+33
+> a:play{wrap = false, degree = 10}
+16
+> a:play{wrap = true, degree = 10}
+4
+> a:play{wrap = true, degree = 1}
+0
+> a:play{wrap = true, degree = 2}
+2
+> a:play{wrap = true, degree = 3}
+4
+> a:play{wrap = true, degree = 4}
+5
+> a:play{wrap = true, degree = 5}
+7
+> a:play{wrap = true, degree = 6}
+9
+> a:play{wrap = true, degree = 7}
+10
+> a:play{wrap = true, degree = 8}
+0
+> a:play{wrap = true, degree = 1}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 2}
+2
+> a:play{wrap = true, mask = {1,2,3}, degree = 3}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 4}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 5}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 6}
+12
+> a:play{wrap = true, mask = {1,2,3}, degree = 7}
+12
+> a:play{wrap = true, mask = {1,2,3}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 8}
+0
+> a:play{wrap = true, mask = nil, degree = 8}
+0
+> a:play{wrap = true, mask = nil, degree = 7}
+10
+> a:play{wrap = true, mask = nil, degree = 8}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 7}
+12
+> a:play{wrap = true, mask = {1,2,3}, degree = 14}
+12
+> a:play{wrap = true, mask = {1,2,3}, degree = 15}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 16}
+2
+> a:play{wrap = true, mask = {1,2,3}, degree = 17}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 18}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 19}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 20}
+12
+> a:play{wrap = true, mask = {1,2,3}, degree = 20}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{wrap = true, mask = {1,2,3}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 2}
+2
+> a:play{wrap = true, mask = {1,2,3}, degree = 3}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 4}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 5}
+4
+> a:play{wrap = true, mask = {1,2,3}, degree = 6}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 7}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 9}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> dofile'vox_object.lua'
+> a = Vox:new()
+> a:play{wrap = true, mask = {1,2,3}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,2,3}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 9}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 10}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 11}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 12}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 2}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 3}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 4}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 5}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 6}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 7}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,9}, degree = 9}
+0
+> a:play{wrap = true, mask = {1,2}, degree = 9}
+2
+> a:play{wrap = true, mask = {1,9}, degree = 9}
+0
+> a = nil
+> dofile'vox_object.lua'
+> a = Vox:new{}
+> a.wrap = true
+> a:play{mask = {1,9}, degree = 1}
+0
+> a:play{mask = {1,9}, degree = 2}
+0
+> a:play{mask = {1,9}, degree = 3}
+0
+> a:play{mask = {1,9}, degree = 4}
+0
+> a:play{mask = {1,9}, degree = 5}
+12
+> a:play{mask = {1,9}, degree = 6}
+12
+> a:play{mask = {1,9}, degree = 7}
+12
+> a:play{mask = {1,9}, degree = 8}
+0
+> a:play{mask = {1,9}, degree = 9}
+0
+> a:play{mask = {1,9}, degree = 10}
+0
+> a:play{mask = {1,9}, degree = 11}
+0
+> a.wrap = false
+> a:play{mask = {1,9}, degree = 11}
+12
+> a:play{mask = {1,9}, degree = 1}
+0
+> a:play{mask = {1,9}, degree = 2}
+0
+> a:play{mask = {1,9}, degree = 3}
+0
+> a:play{mask = {1,9}, degree = 4}
+0
+> a:play{mask = {1,9}, degree = 5}
+12
+> a:play{mask = {1,9}, degree = 6}
+12
+> a:play{mask = {1,9}, degree = 7}
+12
+> a:play{mask = {1,9}, degree = 8}
+12
+> a:play{mask = {1,9}, degree = 9}
+12
+> a:play{mask = {1,9}, degree = 10}
+12
+> a:play{mask = {1,9}, degree = 11}
+12
+> a:play{mask = {1,9}, degree = 12}
+24
+> a:play{mask = {1,9}, degree = 12}
+24
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 2}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> a:play{mask = {1,2}, degree = 4}
+2
+> a:play{mask = {1,2}, degree = 5}
+2
+> a:play{mask = {1,2}, degree = 6}
+12
+> a:play{mask = {1,2}, degree = 7}
+12
+> a:play{mask = {1,2}, degree = 8}
+12
+> a:play{mask = {1,2}, degree = 9}
+14
+> a:play{mask = {1,2}, degree = 10}
+14
+> a:play{mask = {1,2}, degree = 11}
+14
+> a:play{mask = {1,2}, degree = 12}
+14
+> a:play{mask = {1,2}, degree = 13}
+24
+> a:play{mask = {1,2}, degree = 14}
+24
+> a:play{mask = {1,2}, degree = 1}
+0
+> a:play{mask = {1,2}, degree = 2}
+2
+> a:play{mask = {1,2}, degree = 3}
+2
+> a:play{mask = {1,2}, degree = 4}
+2
+> a:play{mask = {1,2}, degree = 5}
+2
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,11}, degree = 1}
+0
+> a:play{mask = {1,2,11}, degree = 2}
+2
+> a:play{mask = {1,2,11}, degree = 3}
+2
+> a:play{mask = {1,2,11}, degree = 4}
+2
+> a:play{mask = {1,2,11}, degree = 5}
+2
+> a:play{mask = {1,2,11}, degree = 6}
+2
+> a:play{mask = {1,2,11}, degree = 7}
+17
+> a:play{mask = {1,2,11}, degree = 8}
+12
+> a:play{mask = {1,2,11}, degree = 9}
+14
+> a:play{mask = {1,2,11}, degree = 10}
+14
+> a:play{mask = {1,2,11}, degree = 11}
+14
+> a:play{mask = {1,2,11}, degree = 112}
+197
+> a:play{mask = {1,2,11}, degree = 12}
+14
+> a:play{mask = {1,2,11}, degree = 13}
+14
+> a:play{mask = {1,2,11}, degree = 14}
+29
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree  =1}
+0
+> a:play{mask = {1,2,3}, degree  =2}
+2
+> a:play{mask = {1,2,3}, degree  =3}
+4
+> a:play{mask = {1,2,3}, degree  =4}
+4
+> a:play{mask = {1,2,3}, degree  =5}
+4
+> a:play{mask = {1,2,3}, degree  =6}
+12
+> a:play{mask = {1,2,3}, degree  =7}
+12
+> a:play{mask = {1,2,3}, degree  =8}
+12
+> a:play{mask = {1,2,3}, degree  =9}
+14
+> a:play{mask = {1,2,3}, degree  =10}
+16
+> a:play{mask = {1,9,10}, degree  =10}
+28
+> a:play{mask = {1,9,10}, degree  =1}
+0
+> a:play{mask = {1,9,10}, degree  =2}
+14
+> a:play{mask = {1,9,10}, degree  =3}
+16
+> a:play{mask = {1,9,10}, degree  =4}
+0
+> a:play{mask = {1,9,10}, degree  =5}
+12
+> a:play{mask = {1,9,10}, degree  =6}
+12
+> a:play{mask = {1,9,10}, degree  =7}
+12
+> a:play{mask = {1,9,10}, degree  =8}
+12
+> a:play{mask = {1,9,10}, degree  =9}
+26
+> a:play{mask = {1,9,10}, degree  =10}
+28
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+2
+> a:play{mask = {1,2,3}, degree = 1}
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+12
+> a:play{mask = {1,9,10}, degree = 6}
+12
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+14
+> a:play{mask = {1,9,10}, degree = 3}
+16
+> a:play{mask = {1,9,10}, degree = 4}
+0
+> a:play{mask = {1,9,10}, degree = 5}
+12
+> a:play{mask = {1,9,10}, degree = 6}
+12
+> a:play{mask = {1,9,10}, degree = 7}
+12
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 9}
+26
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+0
+> a:play{mask = {1,2,3}, degree = 7}
+0
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,2,3}, degree =2}
+2
+> a:play{mask = {1,2,3}, degree =3}
+4
+> a:play{mask = {1,2,3}, degree =4}
+4
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+4
+> a:play{mask = {1,2,3}, degree =7}
+4
+> a:play{mask = {1,2,3}, degree =8}
+12
+> a:play{mask = {1,2,3}, degree =9}
+14
+> a:play{mask = {1,2,3}, degree =10}
+16
+> a:play{mask = {1,2,3}, degree =11}
+16
+> a:play{mask = {1,2,3}, degree =12}
+16
+> a:play{mask = {1,2,3}, degree =13}
+16
+> a:play{mask = {1,2,3}, degree =14}
+16
+> a:play{mask = {1,2,3}, degree =115}
+196
+> a:play{mask = {1,2,3}, degree =15}
+24
+> a:play{mask = {1,2,3}, degree =16}
+26
+> a:play{mask = {1,9,3}, degree =16}
+26
+> a:play{mask = {1,9,3}, degree =1}
+0
+> a:play{mask = {1,9,3}, degree =2}
+2
+> a:play{mask = {1,9,3}, degree =3}
+4
+> a:play{mask = {1,9,3}, degree =3}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}}
+0
+> a:play{mask = {1,9,10}, degree =1}
+0
+> a:play{mask = {1,9,10}, degree =2}
+0
+> a:play{mask = {1,9,10}, degree =3}
+0
+> a:play{mask = {1,9,10}, degree =4}
+0
+> a:play{mask = {1,9,10}, degree =5}
+0
+> a:play{mask = {1,9,10}, degree =6}
+2
+> a:play{mask = {1,9,10}, degree =7}
+2
+> a:play{mask = {1,9,10}, degree =8}
+12
+> a:play{mask = {1,9,10}, degree =9}
+12
+> a:play{mask = {1,9,10}, degree =10}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a =Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+0
+> a:play{mask = {1,9,10}, degree = 5}
+0
+> a:play{mask = {1,9,10}, degree = 6}
+0
+> a:play{mask = {1,9,10}, degree = 7}
+0
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+0
+> a:play{mask = {1,9,10}, degree = 5}
+0
+> a:play{mask = {1,9,10}, degree = 6}
+2
+> a:play{mask = {1,9,10}, degree = 7}
+2
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,2,3}, degree =2}
+2
+> a:play{mask = {1,2,3}, degree =3}
+4
+> a:play{mask = {1,2,3}, degree =4}
+4
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+4
+> a:play{mask = {1,2,3}, degree =7}
+4
+> a:play{mask = {1,2,3}, degree =8}
+12
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,9,10}, degree =1}
+0
+> a:play{mask = {1,9,10}, degree =2}
+2
+> a:play{mask = {1,9,10}, degree =3}
+4
+> a:play{mask = {1,9,10}, degree =4}
+4
+> a:play{mask = {1,9,10}, degree =5}
+4
+> a:play{mask = {1,9,10}, degree =6}
+4
+> a:play{mask = {1,9,10}, degree =7}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree =1}
+0
+> a:play{mask = {1,9,10}, degree =2}
+2
+> a:play{mask = {1,9,10}, degree =3}
+4
+> a:play{mask = {1,9,10}, degree =4}
+4
+> a:play{mask = {1,9,10}, degree =5}
+4
+> a:play{mask = {1,9,10}, degree =6}
+4
+> a:play{mask = {1,9,10}, degree =7}
+4
+> a:play{mask = {1,9,10}, degree =8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+4
+> a:play{mask = {1,9,10}, degree = 5}
+4
+> a:play{mask = {1,9,10}, degree = 6}
+4
+> a:play{mask = {1,9,10}, degree = 7}
+4
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 9}
+14
+> a:play{mask = {1,9,10}, degree = 10}
+16
+> a:play{mask = {1,9,10}, degree = 11}
+16
+> a:play{mask = {1,9,10}, degree = 12}
+16
+> a:play{mask = {1,9,10}, degree = 113}
+192
+> a:play{mask = {1,9,10}, degree = 13}
+16
+> dofile'vox_object.lua'
+> a = nil
+> a = Vox:new()
+> a.mask = {1,9,10}
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+12
+> a.wrap = true
+> a:play{degree = 8}
+0
+> a:play{degree = 7}
+4
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 3}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+0
+> a:play{degree = 1}
+0
+> wrap = false
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+4
+> a:play{degree = 5}
+4
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+0
+> a:play{degree = 9}
+2
+> wrap = nil
+> a.wrap = false
+> a:play{degree = 9}
+14
+> a:play{degree = 10}
+16
+> a:play{degree = 11}
+16
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+4
+> a:play{mask = {1,9,10}, degree = 5}
+4
+> a:play{mask = {1,9,10}, degree = 6}
+4
+> a:play{mask = {1,9,10}, degree = 7}
+4
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 9}
+14
+> a:play{mask = {1,9,10}, degree = 10}
+16
+> a:play{mask = {1,9,10}, degree = 11}
+16
+> a:play{mask = {1,9,10}, degree = 12}
+16
+> a:play{mask = {1,9,10}, degree = 13}
+16
+> a:play{mask = {1,9,10}, degree = 14}
+16
+> a:play{mask = {1,9,10}, degree = 15}
+24
+> a:play{mask = {1,9,10}, degree = 16}
+26
+> a:play{mask = {1,9,10}, degree = 17}
+28
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+4
+> a:play{mask = {1,9,10}, degree = 5}
+4
+> a:play{mask = {1,9,10}, degree = 6}
+4
+> a:play{mask = {1,9,10}, degree = 7}
+4
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 9}
+14
+> a:play{mask = {1,9,10}, degree = 10}
+16
+> a:play{wrap = true, mask = {1,9,10}, degree = 10}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,9,10}, degree = 2}
+2
+> a:play{wrap = true, mask = {1,9,10}, degree = 3}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 4}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 5}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 6}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 7}
+4
+> a:play{wrap = true, mask = {1,9,10}, degree = 8}
+0
+> a:play{wrap = true, mask = {1,9,10}, degree = 1}
+0
+> a:play{wrap = true, mask = {1,9,10}, degree = 2}
+2
+> a:play{wrap = false, mask = {1,9,10}, degree = 2}
+2
+> a:play{wrap = false, mask = {1,9,10}, degree = 9}
+14
+> a:play{wrap = false, mask = {1,9,10}, degree = 8}
+12
+> a:play{wrap = false, mask = {1,9,10}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree =1}
+0
+> a:play{mask = {1,2,3}, degree =2}
+2
+> a:play{mask = {1,2,3}, degree =3}
+4
+> a:play{mask = {1,2,3}, degree =4}
+4
+> a:play{mask = {1,2,3}, degree =5}
+4
+> a:play{mask = {1,2,3}, degree =6}
+4
+> a:play{mask = {1,2,3}, degree =7}
+4
+> a:play{mask = {1,2,3}, degree =8}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:140: unexpected symbol near 'end'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+vox_object.lua:114: attempt to perform arithmetic on a nil value (local 'mask_octave')
+stack traceback:
+	vox_object.lua:114: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> a:play()
+vox_object.lua:114: attempt to perform arithmetic on a nil value (local 'mask_octave')
+stack traceback:
+	vox_object.lua:114: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play()
+0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+0
+> a:play{mask = {1,2,3}, degree = 9}
+2
+> a:play{mask = {1,2,3}, degree = 10}
+4
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+vox_object.lua:130: attempt to perform arithmetic on a nil value (global 'degree')
+stack traceback:
+	vox_object.lua:130: in field 'apply_mask'
+	vox_object.lua:111: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+vox_object.lua:124: attempt to perform arithmetic on a nil value (local 'val')
+stack traceback:
+	vox_object.lua:124: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> a:play{degree = 1}
+0
+> a:play{degree = 2}
+2
+> a:play{degree = 3}
+4
+> a:play{degree = 4}
+5
+> a:play{degree = 5}
+7
+> a:play{degree = 6}
+9
+> a:play{degree = 7}
+10
+> a:play{degree = 8}
+12
+> a:play{degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 1}
+vox_object.lua:124: attempt to perform arithmetic on a nil value (local 'val')
+stack traceback:
+	vox_object.lua:124: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> a:play{mask = {1,9,10}, degree = 9}
+14
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 7}
+4
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a  = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+vox_object.lua:127: attempt to perform arithmetic on a nil value (local 'octave')
+stack traceback:
+	vox_object.lua:127: in field 'apply_wrap'
+	vox_object.lua:109: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+vox_object.lua:109: attempt to perform arithmetic on a nil value (local 'octave')
+stack traceback:
+	vox_object.lua:109: in function <vox_object.lua:91>
+	(...tail calls...)
+	[C]: in ?
+> dofile'vox_object.lua'
+> a = nil
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+4
+> a:play{mask = {1,9,10}, degree = 5}
+4
+> a:play{mask = {1,9,10}, degree = 6}
+4
+> a:play{mask = {1,9,10}, degree = 7}
+4
+> a:play{mask = {1,9,10}, degree = 8}
+12
+> a:play{mask = {1,9,10}, degree = 8, wrap = true}
+0
+> a:play{mask = {1,9,10}, wrap = true, degree = 1}
+0
+> a:play{mask = {1,9,10}, wrap = true, degree = -1}
+4
+> a:play{mask = {1,9,10}, wrap = true, degree = -2}
+4
+> a:play{mask = {1,9,10}, wrap = true, degree = -3}
+4
+> a:play{mask = {1,9,10}, wrap = true, degree = -4}
+4
+> a:play{mask = {1,9,10}, wrap = true, degree = -5}
+2
+> a:play{mask = {1,9,10}, wrap = true, degree = -6}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+5
+> a:play{mask = {1,2,3}, degree = 5}
+5
+> a:play{mask = {1,2,3}, degree = 6}
+5
+> a:play{mask = {1,2,3}, degree = 7}
+5
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> a:play{mask = {1,2,3}, degree = 10}
+16
+> a:play{mask = {1,2,3}, degree = 11}
+17
+> a:play{mask = {1,2,3}, degree = 12}
+17
+> a:play{mask = {1,2,3}, degree = 13}
+17
+> a:play{mask = {1,2,3}, degree = 14}
+17
+> a:play{mask = {1,2,3}, degree = 15}
+24
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+5
+> a:play{mask = {1,2,3}, degree = 5}
+5
+> a:play{mask = {1,2,3}, degree = 6}
+5
+> a:play{mask = {1,2,3}, degree = 7}
+5
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, wrap = true, degree = 8}
+0
+> a:play{mask = {1,2,3}, wrap = true, degree = 7}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 6}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 1}
+0
+> a:play{mask = {1,2,3}, wrap = true, degree = 2}
+2
+> a:play{mask = {1,2,3}, wrap = true, degree = 3}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 4}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 5}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 6}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 7}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 8}
+0
+> a:play{mask = {1,2,3}, wrap = true, degree = 9}
+2
+> a:play{mask = {1,2,3}, wrap = true, degree = 10}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 11}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 12}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 13}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 14}
+4
+> a:play{mask = {1,2,3}, wrap = true, degree = 15}
+0
+> a:play{mask = {1,2,3}, wrap = true, degree = 16}
+2
+> a:play{mask = {1,2,3}, wrap = false, degree = 16}
+26
+> a:play{mask = {1,2,3}, wrap = false, degree = 1}
+0
+> a:play{mask = {1,2,3}, wrap = false, degree = 2}
+2
+> a:play{mask = {1,2,3}, wrap = false, degree = 3}
+4
+> a:play{mask = {1,9,10}, wrap = false, degree = 3}
+0
+> a:play{mask = {1,9,10}, wrap = false, degree = 1}
+0
+> a:play{mask = {1,9,10}, wrap = false, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1,9,10}, degree = 1}
+0
+> a:play{mask = {1,9,10}, degree = 2}
+2
+> a:play{mask = {1,9,10}, degree = 3}
+4
+> a:play{mask = {1,9,10}, degree = 4}
+5
+> a:play{mask = {1,9,10}, degree = 5}
+7
+> a:play{mask = {1,9,10}, degree = 6}
+9
+> a:play{mask = {1,9,10}, degree = 7}
+10
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{wrap = false, mask = {1,9,10}, degree = 1}
+0
+> a:play{wrap = false, mask = {1,9,10}, degree = 2}
+2
+> a:play{wrap = false, mask = {1,9,10}, degree = 3}
+4
+> a:play{wrap = false, mask = {1,9,10}, degree = 4}
+4
+> a:play{wrap = false, mask = {1,9,10}, degree = 5}
+4
+> a:play{wrap = false, mask = {1,9,10}, degree = 6}
+4
+> a:play{wrap = false, mask = {1,9,10}, degree = 7}
+4
+> a:play{wrap = false, mask = {1,9,10}, degree = 8}
+12
+> a = nil
+> dofile'vox_object.lua'
+> a = Vox:new()
+> a.apply_mask_degree(1, mixolydian, {1,9,10})
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a.apply_mask_degree(1, mixolydian, {1,9,10})
+1
+> a.apply_mask_degree(2, mixolydian, {1,9,10})
+2
+> a.apply_mask_degree(3, mixolydian, {1,9,10})
+2
+> a.apply_mask_degree(4, mixolydian, {1,9,10})
+2
+> a.apply_mask_degree(7, mixolydian, {1,9,10})
+0
+> a.apply_mask_degree(8, mixolydian, {1,9,10})
+1
+> a.apply_mask_degree(4, mixolydian, {1,9,10})
+2
+> a.apply_mask_degree(5, mixolydian, {1,9,10})
+2
+> a.apply_mask_degree(5, mixolydian, {1,9,10})
+2
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> a:play{mask = {1,2,3}, degree = 1}
+vox_object.lua:98: attempt to perform arithmetic on a nil value (global 'degree')
+stack traceback:
+	vox_object.lua:98: in field 'apply_mask'
+	vox_object.lua:90: in function <vox_object.lua:73>
+	(...tail calls...)
+	[C]: in ?
+> dofile'vox_object.lua'
+> a = nil
+> a = Vox.new()
+> a = Vox:new()
+> a 
+table: 0x7fc10de072c0
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 9}
+14
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a = Vox:new{mask = {1,2,3}}
+> a:play{degree = 6}
+4
+> a:play{degree = 7}
+4
+> a:play{degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = {1m}}
+stdin:1: malformed number near '1m'
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = 3}
+4
+> a:play{mask = {1,2,3}, degree = 4}
+4
+> a:play{mask = {1,2,3}, degree = 5}
+4
+> a:play{mask = {1,2,3}, degree = 6}
+4
+> a:play{mask = {1,2,3}, degree = 7}
+4
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 8}
+12
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,2,3}, degree = 2}
+2
+> a:play{mask = {1,2,3}, degree = -1}
+-8
+> a:play{mask = {1,2,3}, degree = -2}
+-8
+> a:play{mask = {1,2,3}, degree = -3}
+-8
+> a:play{mask = {1,2,3}, degree = -4}
+-8
+> a:play{mask = {1,2,3}, degree = -5}
+-10
+> a:play{mask = {1,2,3}, degree = 0}
+-8
+> a:play{mask = {1,2,3}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> a:play{mask = {1,3,5}, degree = 2}
+0
+> a:play{mask = {1,3,5}, degree = 3}
+4
+> a:play{mask = {1,3,5}, degree = 4}
+4
+> a:play{mask = {1,3,5}, degree = 5}
+7
+> a:play{mask = {1,3,5}, degree = 0}
+-5
+> a:play{mask = {1,3,5}, degree = 1}
+0
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{mask = I, degree = 6}
+7
+> a:play{mask = I, degree = 5}
+7
+> a:play{mask = I, degree = 4}
+4
+> a:play{mask = I, degree = 3}
+4
+> a:play{mask = I, degree = 2}
+0
+> a:play{mask = I, degree = 1}
+0
+> a:play{mask = II, degree = 1}
+2
+> a:play{mask = III, degree = 1}
+4
+> a:play{mask = IV, degree = 1}
+0
+> a:play{mask = V, degree = 1}
+2
+> a:play{mask = VI, degree = 1}
+0
+> a:play{mask = VII, degree = 1}
+2
+> a:play{mask = V, degree = 1}
+2
+> a:play{mask = V, degree = 1}
+2
+> a:play{mask = V, degree = 2}
+2
+> a:play{mask = V, degree = 3}
+2
+> a:play{mask = V, degree = 4}
+7
+> a:play{mask = V, degree = 5}
+7
+> a:play{mask = V, degree = 5}
+7
+> a:play{mask = V, degree = 1}
+2
+> a:play{mask = V, degree = 2}
+2
+> a:play{mask = V, degree = 3}
+2
+> a:play{mask = V, degree = 4}
+7
+> a:play{mask = V, degree = 5}
+7
+> a:play{mask = V, degree = 6}
+7
+> a:play{mask = V, degree = 7}
+10
+> a:play{mask = V, degree = 8}
+14
+> a:play{mask = V, degree = 1}
+2
+> a:play{mask = I, degree = 1}
+0
+> a:play{scale = lydian, mask = II, degree = 1}
+2
+> a:play{scale = lydian, mask = II, degree = 2}
+2
+> a:play{scale = lydian, mask = II, degree = 3}
+2
+> a:play{scale = lydian, mask = II, degree = 4}
+6
+> a:play{scale = lydian, mask = II, degree = 5}
+6
+> a:play{scale = lydian, mask = II, degree = 6}
+9
+> a:play{scale = lydian, mask = II, degree = 1}
+2
+> a:play{scale = lydian, mask = I, degree = 1}
+0
+> b=Vox:new{degree = 5}
+> _do({a,b}, play)
+vox_object.lua:124: field '?' is not callable (a nil value)
+stack traceback:
+	vox_object.lua:124: in function '_do'
+	(...tail calls...)
+	[C]: in ?
+> _do({a,b}, 'play')
+> _do({a,b}, 'play')
+> _set({a,b}, 'degree', 6})
+stdin:1: ')' expected near '}'
+> _set({a,b}, 'degree', 6)
+> a.degree
+6
+> b.degree
+6
+> b.degree = 5
+> a.degree = 1
+> _do({a,b}, 'play', {degree = 5})
+> voices = {a,b}
+> _do(voices, 'play', {degree = 5})
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:124: <name> expected near 'do'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a=Vox:new()
+> b=Vox:new{degree = 5}
+> voices = {a,b}
+> Vdo(voices, 'play', {degree = 2})
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a=Vox:new()
+> b=Vox:new{degree = 5}
+> a:play{mask = I, degree = 3}
+4
+> a:play{mask = I, degree = 4}
+4
+> a:play{mask = I, degree = 5}
+7
+> a:play{mask = I, degree = 7}
+7
+> a:play{mask = I, degree = 8}
+12
+> a:play{mask = I, degree = 9}
+12
+> a:play{mask = I, degree = 8}
+12
+> a:play{mask = I, degree = 10}
+16
+> a:play{mask = I, degree = 11}
+16
+> a:play{mask = I, degree = 12}
+19
+> a:play{mask = II, degree = 12}
+17
+> a:play{mask = III, degree = 12}
+19
+> a:play{mask = IV, degree = 12}
+17
+> I[4] = 4
+> a:play{mask = I, degree = 1}
+0
+> a:play{mask = I, degree = 2}
+0
+> a:play{mask = I, degree = 3}
+4
+> a:play{mask = I, degree = 4}
+5
+> a:play{mask = I, degree = 5}
+7
+> a:play{mask = I, degree = 6}
+7
+> a:play{mask = I, degree = 7}
+7
+> a:play{mask = I, degree = 8}
+12
+> os.exit()
+davidlovell@DL vox_object % cd ..
+davidlovell@DL github % ls
+SeqSeqSeq	ii_getter	vox_object
+Vox		scales
+davidlovell@DL github % cd Vox
+davidlovell@DL Vox % ls
+README.md	druid.log
+Vox.lua		newVox.lua
+davidlovell@DL Vox % druid
+bye.
+cd ..%                                                                              davidlovell@DL Vox % cd ..
+davidlovell@DL github % cd vox_object
+davidlovell@DL vox_object % ls
+README.md	vox_object.lua
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:131: 'do' expected near 'args'
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new{}
+> preset1 = {degree = 5, octave = 1}
+> preset2 = {degree = 1, octave = 0}
+> a:play(preset1)
+19
+> a:play(preset1)
+19
+> a:play(preset1)
+19
+> a:play(preset1)
+19
+> a:play(preset1)
+19
+> a:play(preset1)
+19
+> a:play(preset2)
+0
+> a:play(preset1)
+19
+> a:play(preset2)
+0
+> preset1 = {degree = 5, octave = 1}
+> preset2 = {degree = 1, octave = 0}
+> cv = 4
+> preset1 = {degree = 5 + cv, octave = 1}
+> a:play(preset1)
+26
+> cv =1
+> cv =0
+> a:play(preset1)
+26
+> dyn(preset1)
+table: 0x7fbaca50c680
+> a:play(preset1)
+26
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = 1
+> b = 2
+> add(1,2)
+3
+> add(a,b)
+3
+> b = 4
+> add(a,b)
+5
+> b = 6
+> add(a,b)
+7
+> function _do(arg)
+>>   return arg
+>> end
+> function dyn(arg)                                                                   return arg                                                                        end
+> _do = nil
+> dyn(cv)
+table: 0x7fd1ae40c670
+> cv[1]
+nil
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = 1
+> b = 4
+> dyn(a) + dyn(b)
+5
+> a = 2
+> dyn(a) + dyn(b)
+6
+> c = {degree = a}
+> dyn(c)
+table: 0x7fd24e505090
+> dyn(c)[degree]
+nil
+> dyn(c)
+table: 0x7fd24e505090
+> a = dyn(c)
+> a.degree
+2
+> a = 5
+> a.degree
+stdin:1: attempt to index a number value (global 'a')
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> a = dyn(c)
+> a.degree
+2
+> a.degree
+2
+> a = nil
+> b= nil
+> c = nil
+> a = {degree = dyn(b)}
+> b = 5
+> a.degree
+nil
+> a = {degree = dyn(b)}
+> a.degree
+5
+> os.exit()
+davidlovell@DL vox_object % cd .. 
+davidlovell@DL github % cd Vox
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % cd ..
+davidlovell@DL github % cd vox_object
+davidlovell@DL vox_object % ls
+README.md	vox_object.lua
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> a = Vox:new()
+> a:play{}
+0
+> A = {degree = 1, octave = 1}
+> B = {degree = 5, octave = 0}
+> preset = A
+> a:play(preset)
+12
+> preset = B
+> a:play(preset)
+7
+> preset = A
+> C = update(preset)
+stdin:1: global 'update' is not callable (a nil value)
+stack traceback:
+	stdin:1: in main chunk
+	[C]: in ?
+> function update(data)
+>>   for k, v in pairs(data) do
+>>     data[k] = v
+>>   end
+>>   return data
+>> end
+> C = update(preset)                                                                > C
+table: 0x7f8d77d05110
+> C.degee
+nil
+> C.degree
+1
+> preset = B
+> C.degree
+1
+> C = update(preset)
+> C.degree
+5
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> os.exit()
+davidlovell@DL vox_object % cd ..
+davidlovell@DL github % cd Vox                 
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % cd .. 
+davidlovell@DL github % cd vox_object
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:130: global 'u' is not callable (a nil value)
+stack traceback:
+	vox_object.lua:130: in main chunk
+	[C]: in ?
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:131: attempt to index a function value (local 'v')
+stack traceback:
+	vox_object.lua:131: in function 'u'
+	vox_object.lua:136: in main chunk
+	[C]: in ?
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> preset
+nil
+> u(A)
+> print(u(A))
+
+> 
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+lua: vox_object.lua:133: field '?' is not callable (a nil value)
+stack traceback:
+	vox_object.lua:133: in function 'u'
+	vox_object.lua:137: in main chunk
+	[C]: in ?
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> u(A)
+1
+> u(A)
+1
+> u(A)
+1
+> u(A)
+1
+> u(A)
+1
+> u(A)
+1
+> u(A)
+1
+> os.exit()
+davidlovell@DL vox_object % lua -i 'vox_object.lua'
+Lua 5.4.3  Copyright (C) 1994-2021 Lua.org, PUC-Rio
+> preset.degree
+1
+> u(A)
+table: 0x7f86b1804330
+> u{degree = function() return a * b end}
+stdin:1: attempt to perform arithmetic on a nil value (global 'a')
+stack traceback:
+	stdin:1: in field '?'
+	vox_object.lua:132: in function 'u'
+	(...tail calls...)
+	[C]: in ?
+> u{degree = function() return a * b end}
+stdin:1: attempt to perform arithmetic on a nil value (global 'a')
+stack traceback:
+	stdin:1: in field '?'
+	vox_object.lua:132: in function 'u'
+	(...tail calls...)
+	[C]: in ?
+> a = 2
+> b = 3
+> u{degree = function() return a * b end}
+table: 0x7f86b18057a0
+> u{degree = function() return a * b end}
+table: 0x7f86b1805d00
+> B = u{degree = function() return a * b end}
+> B.degree
+6
+> B.degree
+6
+> B = u{degree = function() return a * b end}
+> function dyn(data)
+>>   local updated = {}
+>>   for k,v in pairs(data) do
+>>     updated[k] = data[k]()
+>>   end
+>>   return updated
+>> end
+> 
+> A = {degree = function() return cv.degree end}
+> preset = dyn(A)
+> preset.degree
+1
+> A = {degree = function() return a * b  end}
+> preset.degree
+1
+> preset = dyn(A)
+> preset.degree
+6
+> a = 5
+> preset = dyn(A)
+> preset.degree
+15
+> os.exit()
+davidlovell@DL vox_object % cd ..
+davidlovell@DL github % cd Vox
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % dr
+zsh: command not found: dr
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+bye.
+davidlovell@DL Vox % druid
+
+                                                                     
+                                                                     
+                                                                     
+> Vset(voices, 'negharm', false); Vset(voices, 'mask', I); Vset(voic 
+es, 'scale', penta_min)                                              
+                                                                     
+> Vset(voices, 'negharm', false); Vset(voices, 'mask', I); Vset(voic 
+es, 'scale', chromatic)                                              
+                                                                     
+> Vset(voices, 'negharm', false); Vset(voices, 'mask', I); Vset(voic 
+es, 'scale', japanese)                                               
+                                                                     
+> Vset(voices, 'negharm', false); Vset(voices, 'mask', I); Vset(voic 
+es, 'scale', lydian)                                                 
+                                                                     
+> Vset(voices, 'negharm', false); Vset(voices, 'mask', nil); Vset(vo 
+ices, 'scale', lydian)                                               
+                                                                     
+> all.division = 2                                                   
+                                                                     
+> all.division = 4                                                   
+                                                                     
+> all.division = 8                                                   
+                                                                     
+> all.division = 8                                                   
+                                                                     
+> tsnm.on = false                                                    
+                                                                     
+> ii.jf.get('run')                                                   
+^^ii.jf({name=[[run]], device=1, arg=0}, 4.999695)                   
+> ii.jf.run(3.8)                                                     
+                                                                     
+> ii.jf.run(3.7)                                                     
+                                                                     
+> ii.jf.run(3.6)                                                     
+                                                                     
+> ii.jf.run(3.5)                                                     
+                                                                     
+> ii.jf.run(3.4)                                                     
+                                                                     
+> all.division = 2                                                   
+                                                                     
+> ii.jf.run(1)                                                       
+                                                                     
+> ii.jf.run(2)                                                       
+                                                                     
+> ii.jf.run(-2)                                                      
+                                                                     
+> ii.jf.run(-4)                                                      
+                                                                     
+> ii.jf.run(-5)                                                      
+                                                                     
+> all.division = 1                                                   
+                                                                     
+////////////////////////////////////////////////////////////druid////
+                                                                     
