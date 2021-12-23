@@ -237,12 +237,28 @@ function init()
     end
   }
 
+
+  degree_sr = {3}
+  octave_sr = {0}
+
   input[2]{mode = 'change', threshold = 4, direction = 'rising',
     change = function()
       -- tsnm:play(tsnm.seq.preset)
-      bass:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[1], 0, 5, 0, 2)}
-      lead:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[2], 0, 5, 0, 2)}
-      harmony:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[3], 0, 5, 0, 2)}
+      -- bass:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[1], 0, 5, 0, 2)}
+      
+      table.insert(degree_sr, cv.degree)
+      table.insert(octave_sr, cv.octave)
+      
+      
+      
+      ccc = clock.run(
+        function()
+          lead:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[2], 0, 5, 0, 2)}
+          clock.sync(1/(math.random(1,2)*4))
+          harmony:play{degree = table.remove(degree_sr, 1), octave = table.remove(octave_sr, 1), level = linlin(txi.param[3], 0, 5, 0, 2)}
+        end
+      )
+
       flourish:play{degree = cv.degree + flourish.s.degree(), octave = cv.octave, level = linlin(txi.param[4], 0, 5, 0, 2)}
     end
   }
@@ -290,13 +306,12 @@ harmony = Vox:new{
   synth = Vox.jfn,
   scale = cv.scale,
   octave = -1,
-  degree = 3
 }
 
 flourish = Vox:new{
   synth = Vox.wsn,
   scale = cv.scale,
-  mask = mask(lydian, {1,2,3,4,6}),
+  mask = {1,2,3,4,6},
   octave = 1,
   level = 0.1,
   s = {
