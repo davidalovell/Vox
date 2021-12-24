@@ -50,3 +50,7 @@ end
 -- round to cv value integer
 -- remove transposed octaves - use %
 -- create a pentatonic scale from the notes
+
+-- other ideas which you may or may not wish to add:
+-- play a third up from current note, etc
+-- can use Vox
