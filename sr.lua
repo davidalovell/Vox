@@ -22,7 +22,8 @@ end
 function next(shift_register, scale, val)
 
   -- convert voltage to nearest semitone, constrain to one octave (12tet)
-  val = round(val * 12) % 12
+  val = round(val * 12)
+  scale_val = val % 12
 
   -- insert new val at start of shift_register
   -- remove val from end of shift_register
@@ -30,14 +31,14 @@ function next(shift_register, scale, val)
   table.remove(shift_register, #shift_register)
 
   -- compare val with existing values in scale
-  local val_is_duplicate
+  local scale_val_is_duplicate
   for k, v in ipairs(scale) do
-    if val == v then val_is_duplicate = true end
+    if scale_val == v then scale_val_is_duplicate = true end
   end
   
   -- add val if no duplicate value in scale_table
-  if not val_is_duplicate then
-    table.insert(scale, val)
+  if not scale_val_is_duplicate then
+    table.insert(scale, scale_val)
   end
 
   -- sort the table in order to produce a scale
