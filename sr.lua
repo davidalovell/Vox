@@ -7,10 +7,6 @@ function round(x)
   return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
 end
 
-function play_note(note)
-  print(note)
-end
-
 function new_cv()
   -- random pitch cv generator with instability, for testing purposes
   local random_note = math.random(-23,23)
@@ -18,35 +14,36 @@ function new_cv()
   return (random_note + error_margin) / 12
 end
 
-
-function next(shift_register, scale, val)
-
-  -- convert voltage to nearest semitone, constrain to one octave (12tet)
+function do_shift(shift_register, val)
   val = round(val * 12)
-  scale_val = val % 12
-
-  -- insert new val at start of shift_register
-  -- remove val from end of shift_register
   table.insert(shift_register, 1, val)
   table.remove(shift_register, #shift_register)
+end
 
-  -- compare val with existing values in scale
-  local scale_val_is_duplicate
+function do_scale(scale, val)
+  val = round(val * 12) % 12
+
+  local val_is_duplicate
   for k, v in ipairs(scale) do
-    if scale_val == v then scale_val_is_duplicate = true end
+    if val == v then val_is_duplicate = true end
   end
   
-  -- add val if no duplicate value in scale_table
-  if not scale_val_is_duplicate then
-    table.insert(scale, scale_val)
+  if not val_is_duplicate then
+    table.insert(scale, val)
   end
 
-  -- sort the table in order to produce a scale
   table.sort(scale)
+end
+
+
+function run(shift_register, scale)
+  local v = new_cv()
+  do_shift(shift_register, v)
+  do_scale(scale, v)
 
   -- print shift_register
   for i = 1, #shift_register do
-    play_note(shift_register[i])
+    print(shift_register[i])
   end
 
   print()

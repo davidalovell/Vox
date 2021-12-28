@@ -1,6 +1,6 @@
 --- Vox
 
--- scales and chords
+-- scales
 -- modes
 ionian = {0,2,4,5,7,9,11}
 dorian = {0,2,3,5,7,9,10} -- flat 3rd, flat 7th
@@ -18,32 +18,6 @@ function mask(scale, degrees)
   end
   return m
 end
-
--- pentatonic scales
-penta_maj = mask(ionian, {1,2,3,5,6})
-penta_sus = mask(dorian, {1,2,4,5,7})
-blues_min = mask(phrygian, {1,3,4,6,7})
-blues_maj = mask(mixolydian, {1,2,4,5,6})
-penta_min = mask(aeolian, {1,3,4,5,7})
-japanese = mask(phrygian, {1,2,4,5,6})
-
--- chords
-I = {1,3,5}
-II = {2,4,6}
-III = {3,5,7}
-IV = {4,6,8}
-V = {5,7,9}
-VI = {6,8,10}
-VII = {7,9,11}
---
-
-
-
--- divisions
-divs = {1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32}
---
-
-
 
 -- initial values
 cv = {
@@ -227,8 +201,6 @@ end
 function init()
   ii.jf.mode(1)
   ii.wsyn.ar_mode(1)
-  ii.jf.run_mode(1)
-  ii.jf.run(5)
 
   input[1]{mode = 'scale', notes = cv.scale,
     scale = function(s)
@@ -237,47 +209,45 @@ function init()
     end
   }
 
+  all = {
+    division = 1,
+    action = function()
+      while true do
+        ii_getter()
+        clock.tempo = linlin(txi.input[1], 0, 5, 30, 300)
+        all.division = selector(txi.param[1], divs, 0, 10)
+        clock.sync(1/32)
+      end
+    end
+  }
+  all.clock = clock.run(all.action)
 
-  degree_sr = {3}
-  octave_sr = {0}
+
+
+
+
+
 
   input[2]{mode = 'change', threshold = 4, direction = 'rising',
     change = function()
       -- tsnm:play(tsnm.seq.preset)
       -- bass:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[1], 0, 5, 0, 2)}
       
-      table.insert(degree_sr, cv.degree)
-      table.insert(octave_sr, cv.octave)
       
       
-      
-      ccc = clock.run(
-        function()
+      -- main = clock.run(
+      --   function()
           lead:play{degree = cv.degree, octave = cv.octave, level = linlin(txi.param[2], 0, 5, 0, 2)}
-          clock.sync(1/(math.random(1,2)*4))
-          harmony:play{degree = table.remove(degree_sr, 1), octave = table.remove(octave_sr, 1), level = linlin(txi.param[3], 0, 5, 0, 2)}
-        end
-      )
+      --   end
+      -- )
 
-      flourish:play{degree = cv.degree + flourish.s.degree(), octave = cv.octave, level = linlin(txi.param[4], 0, 5, 0, 2)}
     end
   }
 
   output[1]:clock(1)
 end
 
-all = {
-  division = 1,
-  action = function()
-    while true do
-      ii_getter()
-      clock.tempo = linlin(txi.input[1], 0, 5, 30, 300)
-      all.division = selector(txi.param[1], divs, 0, 10)
-      clock.sync(1/32)
-    end
-  end
-}
-all.clock = clock.run(all.action)
+
 
 -- tsnm = Vox:new{
 --   level = 0.3,
@@ -291,31 +261,31 @@ all.clock = clock.run(all.action)
 --   }
 -- }
 
-bass = Vox:new{
-  synth = Vox.jfv,
-  scale = cv.scale,
-  octave = -2
-}
+-- bass = Vox:new{
+--   synth = Vox.jfv,
+--   scale = cv.scale,
+--   octave = -2
+-- }
 
 lead = Vox:new{
   synth = Vox.jfn,
   scale = cv.scale,
 }
 
-harmony = Vox:new{
-  synth = Vox.jfn,
-  scale = cv.scale,
-  octave = -1,
-}
+-- harmony = Vox:new{
+--   synth = Vox.jfn,
+--   scale = cv.scale,
+--   octave = -1,
+-- }
 
-flourish = Vox:new{
-  synth = Vox.wsn,
-  scale = cv.scale,
-  mask = {1,2,3,4,6},
-  octave = 1,
-  level = 0.1,
-  s = {
-    degree = sequins{1,2,3,4,5,6,7,8}
-  }
-}
+-- flourish = Vox:new{
+--   synth = Vox.wsn,
+--   scale = cv.scale,
+--   mask = {1,2,3,4,6},
+--   octave = 1,
+--   level = 0.1,
+--   s = {
+--     degree = sequins{1,2,3,4,5,6,7,8}
+--   }
+-- }
 
