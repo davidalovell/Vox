@@ -8,7 +8,7 @@ octave = -2
 refresh_rate = 1/64
 
 enabled = true
-prev_enabled = false
+enabled_settting = false
 --
 
 
@@ -132,7 +132,11 @@ end
 
 
 
-main = {}
+main = {
+  enabled_settting = false,
+  reset_setting = false
+}
+
 main.clock = clock.run(
   function()
     while true do
@@ -140,16 +144,24 @@ main.clock = clock.run(
 
       get_txi()
 
-      -- 1
-      enabled = selector(txi.input[1], {false, true, true}, 0, 10)
-
-      if enabled == true and prev_enabled == false then
+      -- txi.input[1]
+      -- 
+      main.enabled = selector(txi.input[1], {false, true, true}, 0, 5)
+      if main.enabled == true and main.enabled_settting == false then
         output[1]:clock(1)
-        prev_enabled = true
-      elseif enabled == false and prev_enabled == true then
+        main.enabled_settting = true
+      elseif main.enabled == false and main.enabled_settting == true then
         output[1]:clock('none')
-        prev_enabled = false
+        main.enabled_settting = false
       end
+
+      main.reset = selector(txi.input[1], {false, false, true}, 0, 5)
+      if main.reset == true then
+        scale = {0}
+      end
+
+
+
 
       -- 2
       clock.tempo = linlin(txi.input[2], 0, 5, 30, 300)
