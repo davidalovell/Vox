@@ -1,10 +1,26 @@
--- TSNM & JF
+--- TSNM & JF
+-- NB: each w/ has a different address - w/[1] and w/[2]
 
--- ii.wsyn[1].something
--- ii.wdel[2].something
+-- controls
+-- volume
 
--- constants
-octave = -3
+-- crow
+-- input 1: gate
+-- input 2: vol
+-- output1: lfo
+-- output2: lfo
+-- output3: lfo
+-- output4: lfo
+
+-- txi
+-- input 1: v8
+-- input 2: v8
+-- input 3: jf mode
+-- input 4: 
+-- param 1: seq1 (accent sequencer)
+-- param 2: seq2
+-- param 3: seq3
+-- param 4: seq4
 
 
 -- txi getter, saves txi param and input values as a table
@@ -66,6 +82,7 @@ end
 
 function init()
   ii.jf.mode(1)
+  ii.jf.transpose(-3)
   
   input[1]{mode = 'scale',
     notes = {0,1,2,3,4,5,6,7,8,9,10,11},
@@ -98,7 +115,7 @@ end
       add_to_shift(shift_register, input[1].volts)
 
       for i = 1, 2 do
-        ii.jf.play_note(shift_register[i] + octave, 2)
+        ii.jf.play_note(shift_register[i], 2)
         clock.sleep(math.random()/40)
       end
     end

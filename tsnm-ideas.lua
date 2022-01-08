@@ -1,0 +1,25 @@
+-- controls
+-- volume
+-- ii.jf.retune
+  -- channel
+  -- numerator
+  -- denominator
+  -- lock / save settings (or automatic)
+
+-- crow
+-- input 1: gate
+-- input 2: 
+-- output1: lfo
+-- output2: lfo
+-- output3: lfo
+-- output4: lfo
+
+-- txi
+-- input 1: v8
+-- input 2: v8
+-- input 3: jf mode
+-- input 4: 
+-- param 1: channel
+-- param 2: numerator
+-- param 3: denominator
+-- param 4: lock / save (TODO automatic lock / save) 
