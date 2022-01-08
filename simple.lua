@@ -15,12 +15,12 @@
 -- txi
 -- input 1: v8
 -- input 2: v8
--- input 3: jf mode
+-- input 3: 
 -- input 4: 
--- param 1: seq1 (accent sequencer)
--- param 2: seq2
--- param 3: seq3
--- param 4: seq4
+-- param 1: 
+-- param 2: 
+-- param 3: 
+-- param 4: 
 
 
 -- txi getter, saves txi param and input values as a table
