@@ -5,16 +5,16 @@
 -- volume
 
 -- crow
--- input 1: gate
--- input 2: vol
+-- input 1: gate 1
+-- input 2: gate 2
 -- output1: lfo
 -- output2: lfo
 -- output3: lfo
 -- output4: lfo
 
 -- txi
--- input 1: v8
--- input 2: v8
+-- input 1: v8 1
+-- input 2: v8 2
 -- input 3: 
 -- input 4: 
 -- param 1: 
