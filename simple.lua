@@ -3,6 +3,9 @@
 -- ii.wsyn[1].something
 -- ii.wdel[2].something
 
+-- constants
+octave = -3
+
 
 -- txi getter, saves txi param and input values as a table
 txi = {param = {0,0,0,0}, input = {0,0,0,0}}
@@ -65,7 +68,7 @@ function init()
   ii.jf.mode(1)
   
   input[1]{mode = 'scale',
-    notes = {0,1,2,3,4,5,6,7,8,9,10},
+    notes = {0,1,2,3,4,5,6,7,8,9,10,11},
     scale = function(s)
       input[1].index = s.index
       input[1].octave = s.octave
@@ -95,7 +98,7 @@ end
       add_to_shift(shift_register, input[1].volts)
 
       for i = 1, 2 do
-        ii.jf.play_note(shift_register[i], 2)
+        ii.jf.play_note(shift_register[i] + octave, 2)
         clock.sleep(math.random()/40)
       end
     end
