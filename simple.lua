@@ -1,8 +1,13 @@
 --- TSNM & JF
 -- NB: each w/ has a different address - w/[1] and w/[2]
 
--- controls
+-- TODO
+-- controls:
+-- number of voices played on SR
+-- number of voices from inputs
 -- volume
+-- lfo speeds (1 knob)
+-- bass gate in
 
 -- crow
 -- input 1: gate 1
@@ -26,7 +31,7 @@
 -- txi getter, saves txi param and input values as a table
 txi = {param = {0,0,0,0}, input = {0,0,0,0}}
 
-function txi.get()
+txi.get = function()
   for i = 1, 4 do
     ii.txi.get('param', i)
     ii.txi.get('in', i)
@@ -37,7 +42,7 @@ txi.refresh = clock.run(
   function()
     while true do
       txi.get()
-      clock.sleep(0.1)
+      clock.sleep(0.015)
     end
   end
 )
@@ -112,10 +117,12 @@ end
   clock.run(
     function()
       clock.sleep(0.05)
-      add_to_shift(shift_register, input[1].volts)
+      -- add_to_shift(shift_register, input[1].note)
+      add_to_shift(shift_register, round(txi.input[1] * 12))
 
-      for i = 1, 2 do
-        ii.jf.play_note(shift_register[i], 2)
+      for i = 1, 1 do
+        local note = shift_register[i] / 12
+        ii.jf.play_note(note, 2)
         clock.sleep(math.random()/40)
       end
     end
