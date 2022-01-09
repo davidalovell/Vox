@@ -118,7 +118,7 @@ end
     function()
       clock.sleep(0.05)
       -- add_to_shift(shift_register, input[1].note)
-      add_to_shift(shift_register, round(txi.input[1] * 12))
+      add_to_shift(shift_register, round(txi.input[3] * 12))
 
       for i = 1, 1 do
         local note = shift_register[i] / 12
