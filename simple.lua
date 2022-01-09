@@ -10,8 +10,8 @@
 -- bass gate in
 
 -- crow
--- input 1: gate 1
--- input 2: gate 2
+-- input 1: clock
+-- input 2: gate
 -- output1: lfo
 -- output2: lfo
 -- output3: lfo
