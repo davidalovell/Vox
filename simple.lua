@@ -18,14 +18,14 @@
 -- output4: lfo
 
 -- txi
--- input 1: v8 1
--- input 2: v8 2
--- input 3: 
--- input 4: 
--- param 1: 
--- param 2: 
--- param 3: 
--- param 4: 
+-- input 1: bass jf s&h rate
+-- input 2: pent ws s&h rate
+-- input 3: v8 1
+-- input 4: v8 2
+-- param 1: lead jf off / vol 1-9
+-- param 2: harm jf off / vol 1-9
+-- param 3: bass jf off / vol 1-9
+-- param 4: pent ws off / vol 1-9
 
 
 -- txi getter, saves txi param and input values as a table
