@@ -88,21 +88,33 @@ end
 function init()
   ii.jf.mode(1)
   ii.jf.transpose(-3)
-  
-  input[1]{mode = 'scale',
-    notes = {0,1,2,3,4,5,6,7,8,9,10,11},
-    scale = function(s)
-      input[1].index = s.index
-      input[1].octave = s.octave
-      input[1].note = s.note
+
+  input[1]{
+    mode = 'change',
+    threshold = 4,
+    direction = 'rising',
+    change = function()
+      clock.run(
+        function()
+          clock.sleep(0.05)
+          jf(txi.input[3], txi.param[1])
+        end
+      )
     end
   }
-  
+
   input[2]{
     mode = 'change',
     threshold = 4,
     direction = 'rising',
-    change = shift
+    change = function()
+      clock.run(
+        function()
+          clock.sleep(0.05)
+          jf(txi.input[4], txi.param[1])
+        end
+      )
+    end
   }
 
   for i = 1, 4 do
@@ -112,19 +124,20 @@ function init()
 
 end
 
-
- shift = function()
-  clock.run(
-    function()
-      clock.sleep(0.05)
-      -- add_to_shift(shift_register, input[1].note)
-      add_to_shift(shift_register, round(txi.input[3] * 12))
-
-      for i = 1, 1 do
-        local note = shift_register[i] / 12
-        ii.jf.play_note(note, 2)
-        clock.sleep(math.random()/40)
-      end
-    end
-  )
+function jf(note, level)
+  note = round(note * 12)
+  level = level == nil and 2 or level
+  level = linlin(level, 1, 10, 0, 5)
+  local enabled = selector(level, {false, true}, 0, 1)
+  if enabled == false then return end
+  ii.jf.play_note(note / 12, level)
 end
+
+-- input[1]{mode = 'scale',
+--   notes = {0,1,2,3,4,5,6,7,8,9,10,11},
+--   scale = function(s)
+--     input[1].index = s.index
+--     input[1].octave = s.octave
+--     input[1].note = s.note
+--   end
+-- }
