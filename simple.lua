@@ -117,16 +117,31 @@ function init()
     end
   }
 
+   
+
+  output[1].action = lfo(dyn{time = 1}, dyn{height = 1}, 'sine')
+  output[2].action = lfo(dyn{time = 2}, dyn{height = 1}, 'sine')
+  output[3].action = lfo(dyn{time = 3}, dyn{height = 1}, 'sine')
+  output[4].action = lfo(dyn{time = 4}, dyn{height = 1}, 'sine')
+  
   for i = 1, 4 do
-    output[i].action = lfo(dyn{time = 1}, dyn{height = 1}, 'sine')
     output[i]()
   end
 
 end
 
+-- main = clock.run(
+--   function()
+--     while true do
+--       clock.sleep(1)
+--       output[1].dyn.time = txi.input[1]
+--     end
+--   end
+-- )
+
+
 function jf(note, level)
   note = round(note * 12)
-  level = level == nil and 2 or level
   level = linlin(level, 1, 10, 0, 5)
   local enabled = selector(level, {false, true}, 0, 1)
   if enabled == false then return end
