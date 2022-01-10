@@ -2,7 +2,10 @@
 -- NB: each w/ has a different address - w/[1] and w/[2]
 
 -- TODO
--- controls:
+-- code order
+-- code readability
+-- DRY code
+-- JF synth mode off
 
 -- crow
 -- input 1: gate 1
@@ -10,17 +13,17 @@
 -- output 1: lfo 1
 -- output 2: lfo 2
 -- output 3: envelope
--- output 4: random (based on gate 1/2)
+-- output 4: random cv (based on gate 1 or 2)
 
 -- txi
--- param 1: synth mode off / volume
--- param 2: lfo rates
+-- param 1: notes off / volume
+-- param 2: lfo rate
 -- param 3: attack time
 -- param 4: release time
 -- input 1: v8 1
 -- input 2: v8 2
 -- input 3: volume offset
--- input 4: gate delay offset
+-- input 4: jitter offset
 
 
 
