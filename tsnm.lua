@@ -3,29 +3,26 @@
 
 -- TODO
 -- controls:
--- number of voices played on SR
--- number of voices from inputs
--- volume
--- lfo speeds (1 knob)
--- bass gate in
 
 -- crow
--- input 1: clock
--- input 2: gate
--- output1: lfo
--- output2: lfo
--- output3: lfo
--- output4: lfo
+-- input 1: gate 1
+-- input 2: gate 2
+-- output 1: lfo 1
+-- output 2: lfo 2
+-- output 3: envelope
+-- output 4: random (based on gate 1/2)
 
 -- txi
--- input 1: bass jf s&h rate
--- input 2: pent ws s&h rate
--- input 3: v8 1
--- input 4: v8 2
--- param 1: lead jf off / vol 1-9
--- param 2: harm jf off / vol 1-9
--- param 3: bass jf off / vol 1-9
--- param 4: pent ws off / vol 1-9
+-- param 1: synth mode off / volume
+-- param 2: lfo rates
+-- param 3: attack time
+-- param 4: release time
+-- input 1: v8 1
+-- input 2: v8 2
+-- input 3: volume offset
+-- input 4: gate delay offset
+
+
 
 
 -- txi getter, saves txi param and input values as a table
@@ -38,6 +35,10 @@ txi.get = function()
   end
 end
 
+ii.txi.event = function(e, val)
+  txi[e.name == 'in' and 'input' or e.name][e.arg] = val
+end
+
 txi.refresh = clock.run(
   function()
     while true do
@@ -46,11 +47,9 @@ txi.refresh = clock.run(
     end
   end
 )
-
-ii.txi.event = function(e, val)
-  txi[e.name == 'in' and 'input' or e.name][e.arg] = val
-end
 --
+
+
 
 
 -- helper functions
@@ -74,17 +73,9 @@ end
 --
 
 
--- shift register
-shift_register = {0,0,0,0,0,0,0,0}
 
-function add_to_shift(shift_register, val)
-  table.insert(shift_register, 1, val)
-  table.remove(shift_register, #shift_register)
-end
+
 --
-
-
-
 function init()
   ii.jf.mode(1)
   ii.jf.transpose(-3)
@@ -96,8 +87,10 @@ function init()
     change = function()
       clock.run(
         function()
-          clock.sleep(0.05)
-          jf(txi.input[3], txi.param[1])
+          clock.sleep(0.05 + txi.input[4]/50)
+          synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
+          output[3]()
+          output[4].volts = rnd()
         end
       )
     end
@@ -110,43 +103,60 @@ function init()
     change = function()
       clock.run(
         function()
-          clock.sleep(0.05)
-          jf(txi.input[4], txi.param[1])
+          clock.sleep(0.05 + txi.input[4]/50)
+          synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
+          output[3]()
+          output[4].volts = rnd()
         end
       )
     end
   }
 
-   
+  output[1].action = lfo(dyn{time = 0.25}, dyn{height = 5}, 'sine')
+  output[2].action = lfo(dyn{time = 0.5}, dyn{height = 5}, 'sine')
+  output[3].action = ar(dyn{attack = 0}, dyn{release = 0.5}, dyn{height = 5}, 'linear')
 
-  output[1].action = lfo(dyn{time = 1}, dyn{height = 1}, 'sine')
-  output[2].action = lfo(dyn{time = 2}, dyn{height = 1}, 'sine')
-  output[3].action = lfo(dyn{time = 3}, dyn{height = 1}, 'sine')
-  output[4].action = lfo(dyn{time = 4}, dyn{height = 1}, 'sine')
+  for i = 1, 2 do output[i]() end
   
-  for i = 1, 4 do
-    output[i]()
-  end
-
 end
-
--- main = clock.run(
---   function()
---     while true do
---       clock.sleep(1)
---       output[1].dyn.time = txi.input[1]
---     end
---   end
--- )
+--
 
 
-function jf(note, level)
+
+
+-- clocks
+output_refresh = clock.run(
+  function()
+    while true do
+      clock.sleep(0.1)
+      output[1].dyn.time = 0.005 + linlin(txi.param[2], 0, 10, 0, 2.5)
+      output[2].dyn.time = 0.005 + linlin(txi.param[2], 0, 10, 0, 5)
+      output[3].dyn.attack = linlin(txi.param[3], 0, 10, 0, 1)
+      output[3].dyn.release = linlin(txi.param[4], 0, 10, 0, 1)
+    end
+  end
+)
+--
+
+
+
+
+--
+function synth(note, level)
   note = round(note * 12)
-  level = linlin(level, 1, 10, 0, 5)
+  level = linlin(level, 0.5, 10, 0, 5)
   local enabled = selector(level, {false, true}, 0, 1)
   if enabled == false then return end
   ii.jf.play_note(note / 12, level)
 end
+
+function rnd()
+  return math.random() * 10 - 5
+end
+--
+
+
+
 
 -- input[1]{mode = 'scale',
 --   notes = {0,1,2,3,4,5,6,7,8,9,10,11},
