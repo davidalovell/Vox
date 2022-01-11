@@ -5,7 +5,7 @@
 -- code order
 -- code readability
 -- DRY code
--- JF synth mode off
+-- slop that responds to tempo
 
 -- crow
 -- input 1: gate 1
