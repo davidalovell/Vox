@@ -12,18 +12,18 @@
 -- input 2: gate 2
 -- output 1: lfo 1
 -- output 2: lfo 2
--- output 3: envelope
+-- output 3: ar envelope
 -- output 4: random cv (based on gate 1 or 2)
 
 -- txi
 -- param 1: notes off / volume
 -- param 2: lfo rate
--- param 3: attack time
--- param 4: release time
+-- param 3: ar envelope attack time
+-- param 4: ar envelope release time
 -- input 1: v8 1
 -- input 2: v8 2
 -- input 3: volume offset
--- input 4: jitter offset
+-- input 4: slop
 
 
 
@@ -64,14 +64,14 @@ function round(x)
   return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
 end
 
-function linlin(x, in_min, in_max, out_min, out_max)
+function range(x, in_min, in_max, out_min, out_max)
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 end
 
 function selector(x, data, in_min, in_max, out_min, out_max)
   out_min = out_min or 1
   out_max = out_max or #data
-  return data[ clamp( round( linlin( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
+  return data[ clamp( round( range( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
 end
 --
 
@@ -90,10 +90,11 @@ function init()
     change = function()
       clock.run(
         function()
-          clock.sleep(0.05 + txi.input[4]/50)
+          local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+          clock.sleep(0.05 + r)
           synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
-          output[3]()
-          output[4].volts = rnd()
+          output[3].volts = random_voltage()
+          output[4]()
         end
       )
     end
@@ -106,10 +107,12 @@ function init()
     change = function()
       clock.run(
         function()
-          clock.sleep(0.05 + txi.input[4]/50)
+          local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+          print(txi.input[4], r)
+          clock.sleep(0.05 + r)
           synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
-          output[3]()
-          output[4].volts = rnd()
+          output[3].volts = random_voltage()
+          output[4]()
         end
       )
     end
@@ -117,10 +120,10 @@ function init()
 
   output[1].action = lfo(dyn{time = 0.25}, dyn{height = 5}, 'sine')
   output[2].action = lfo(dyn{time = 0.5}, dyn{height = 5}, 'sine')
-  output[3].action = ar(dyn{attack = 0}, dyn{release = 0.5}, dyn{height = 5}, 'linear')
+  output[4].action = ar(dyn{attack = 0}, dyn{release = 0.5}, dyn{height = 5}, 'linear')
 
-  for i = 1, 2 do output[i]() end
-  
+  output[1]()
+  output[2]()
 end
 --
 
@@ -128,14 +131,14 @@ end
 
 
 -- clocks
-output_refresh = clock.run(
+crow.refresh = clock.run(
   function()
     while true do
       clock.sleep(0.1)
-      output[1].dyn.time = 0.005 + linlin(txi.param[2], 0, 10, 0, 2.5)
-      output[2].dyn.time = 0.005 + linlin(txi.param[2], 0, 10, 0, 5)
-      output[3].dyn.attack = linlin(txi.param[3], 0, 10, 0, 1)
-      output[3].dyn.release = linlin(txi.param[4], 0, 10, 0, 1)
+      output[1].dyn.time = 0.005 + 10 - range(txi.param[2], 0, 10, 0, 10)
+      output[2].dyn.time = 0.005 + 20 - range(txi.param[2], 0, 10, 0, 10)
+      output[4].dyn.attack = range(txi.param[3], 0, 10, 0, 1)
+      output[4].dyn.release = range(txi.param[4], 0, 10, 0, 1)
     end
   end
 )
@@ -144,16 +147,19 @@ output_refresh = clock.run(
 
 
 
---
+
+-- synth functions
 function synth(note, level)
-  note = round(note * 12)
-  level = linlin(level, 0.5, 10, 0, 5)
-  local enabled = selector(level, {false, true}, 0, 1)
+  note = round(note * 12) / 12
+  level = range(level, 0.5, 10, 0, 5)
+
+  local enabled = selector(level, {false, true}, 0, 0.1)
   if enabled == false then return end
-  ii.jf.play_note(note / 12, level)
+  
+  ii.jf.play_note(note, level)
 end
 
-function rnd()
+function random_voltage()
   return math.random() * 10 - 5
 end
 --
