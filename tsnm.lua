@@ -2,8 +2,10 @@
 -- NB: each w/ has a different address - w/[1] and w/[2]
 
 -- TODO
+-- make lfo into triangle with skew
 -- code order
 -- code readability
+-- global vars at start of code
 -- DRY code
 -- slop that responds to tempo
 
@@ -12,17 +14,17 @@
 -- input 2: gate 2
 -- output 1: lfo 1
 -- output 2: lfo 2
--- output 3: ar envelope
--- output 4: random cv (based on gate 1 or 2)
+-- output 3: random cv (based on gate 1 and 2)
+-- output 4: ar envelope
 
 -- txi
--- param 1: notes off / volume
+-- param 1: off / volume
 -- param 2: lfo rate
 -- param 3: ar envelope attack time
 -- param 4: ar envelope release time
 -- input 1: v8 1
 -- input 2: v8 2
--- input 3: volume offset
+-- input 3: volume offset *lfo skew
 -- input 4: slop
 
 
