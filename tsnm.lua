@@ -18,7 +18,16 @@
 -- input 3: volume offset *lfo skew
 -- input 4: gate delay (slop)
 
-
+-- todo
+-- make lfo into triangle with skew based on input[3]
+-- make gate delay (not +/-)
+-- global vars at start of code
+-- code order
+-- code readability
+-- DRY code
+-- date delay that responds to tempo
+-- Change the input to a random gate delay (rather than +/-)
+-- Make input change functions better
 
 
 -- txi getter, saves txi param and input values as a table
@@ -80,35 +89,14 @@ function init()
     mode = 'change',
     threshold = 4,
     direction = 'rising',
-    change = function()
-      clock.run(
-        function()
-          local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-          clock.sleep(0.05 + r)
-          synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
-          output[3].volts = random_voltage()
-          output[4]()
-        end
-      )
-    end
+    change = one
   }
 
   input[2]{
     mode = 'change',
     threshold = 4,
     direction = 'rising',
-    change = function()
-      clock.run(
-        function()
-          local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-          print(txi.input[4], r)
-          clock.sleep(0.05 + r)
-          synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
-          output[3].volts = random_voltage()
-          output[4]()
-        end
-      )
-    end
+    change = two
   }
 
   output[1].action = lfo(dyn{time = 0.25}, dyn{height = 5}, 'sine')
@@ -124,7 +112,46 @@ end
 
 
 -- clocks
-crow.refresh = clock.run(
+
+one = function()
+  clock.run(
+    function()
+      -- gate delay
+      local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+      clock.sleep(0.05 + r)
+
+      -- outout random voltage centred around 0v
+      output[3].volts = math.random() * 10 - 5
+
+      -- trigger ar envelope
+      output[4]()
+
+      -- play synth
+      synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
+    end
+  )
+end
+
+function()
+  clock.run(
+    function()
+      -- gate delay
+      local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+      clock.sleep(0.05 + r)
+
+      -- outout random voltage centred around 0v
+      output[3].volts = math.random() * 10 - 5
+
+      -- trigger ar envelope
+      output[4]()
+
+      -- play synth
+      synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
+    end
+  )
+end
+
+refresh = clock.run(
   function()
     while true do
       clock.sleep(0.1)
@@ -136,6 +163,11 @@ crow.refresh = clock.run(
   end
 )
 --
+
+
+
+
+
 
 
 
@@ -153,7 +185,7 @@ function synth(note, level)
 end
 
 function random_voltage()
-  return math.random() * 10 - 5
+  return 
 end
 --
 
