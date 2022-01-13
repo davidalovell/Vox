@@ -117,8 +117,9 @@ one = function()
   clock.run(
     function()
       -- gate delay
-      local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-      clock.sleep(0.05 + r)
+      -- local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+      local delay = math.random() * round(txi.input[4]) / 10
+      clock.sleep(0.05 + delay)
 
       -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
@@ -136,8 +137,9 @@ function()
   clock.run(
     function()
       -- gate delay
-      local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-      clock.sleep(0.05 + r)
+      -- local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
+      local delay = math.random() * round(txi.input[4]) / 10
+      clock.sleep(0.05 + delay)
 
       -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
@@ -182,10 +184,6 @@ function synth(note, level)
   if enabled == false then return end
   
   ii.jf.play_note(note, level)
-end
-
-function random_voltage()
-  return 
 end
 --
 
