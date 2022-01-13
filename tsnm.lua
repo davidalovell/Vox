@@ -69,7 +69,6 @@ function selector(x, data, in_min, in_max, out_min, out_max)
   return data[ clamp( round( map( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
 end
 
--- init
 function init()
   ii.jf.mode(1)
   ii.jf.transpose(-3)
@@ -96,32 +95,23 @@ function init()
   output[2]()
 end
 
--- clocks
 one = function()
   clock.run(
     function()
-      -- gate delay
       clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
-      -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
-      -- trigger ar envelope
       output[4]()
-      -- play synth
       synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
     end
   )
 end
 
-function()
+two = function()
   clock.run(
     function()
-      -- gate delay
       clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
-      -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
-      -- trigger ar envelope
       output[4]()
-      -- play synth
       synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
     end
   )
@@ -139,16 +129,11 @@ refresh = clock.run(
   end
 )
 
--- synth
 function synth(note, level)
-  -- if param is ccw then synth is not played
   local enabled = selector(level, {false, true}, 0, 0.1)
   if enabled == false then return end
 
-  -- quantise to semitones
   note = round(note * 12) / 12
-
-  -- level control
   level = range(level, 0.5, 10, 0, 5)
 
   ii.jf.play_note(note, level)
