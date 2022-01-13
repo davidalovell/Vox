@@ -108,35 +108,12 @@ function init()
 
 end
 
-one = function()
-  clock.run(
-    function()
-      clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
-      output[3].volts = math.random() * 10 - 5
-      output[4]()
-      synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
-    end
-  )
-end
-
-two = function()
-  clock.run(
-    function()
-      clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
-      output[3].volts = math.random() * 10 - 5
-      output[4]()
-      synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
-    end
-  )
-end
-
 function play(ix)
   clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
   output[3].volts = math.random() * 10 - 5
   output[4]()
   synth(txi.input[ix], txi.param[1] + math.abs(txi.input[3]))
 end
-
 
 function synth(note, level)
   local enabled = selector(level, {false, true}, 0, 0.1)
