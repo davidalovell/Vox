@@ -66,14 +66,14 @@ function round(x)
   return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
 end
 
-function range(x, in_min, in_max, out_min, out_max)
+function map(x, in_min, in_max, out_min, out_max)
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 end
 
 function selector(x, data, in_min, in_max, out_min, out_max)
   out_min = out_min or 1
   out_max = out_max or #data
-  return data[ clamp( round( range( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
+  return data[ clamp( round( map( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
 end
 --
 
@@ -155,10 +155,10 @@ refresh = clock.run(
   function()
     while true do
       clock.sleep(0.1)
-      output[1].dyn.time = 0.005 + 10 - range(txi.param[2], 0, 10, 0, 10)
-      output[2].dyn.time = 0.005 + 20 - range(txi.param[2], 0, 10, 0, 10)
-      output[4].dyn.attack = range(txi.param[3], 0, 10, 0, 1)
-      output[4].dyn.release = range(txi.param[4], 0, 10, 0, 1)
+      output[1].dyn.time = 0.005 + 10 - map(txi.param[2], 0, 10, 0, 10)
+      output[2].dyn.time = 0.005 + 20 - map(txi.param[2], 0, 10, 0, 10)
+      output[4].dyn.attack = map(txi.param[3], 0, 10, 0, 1)
+      output[4].dyn.release = map(txi.param[4], 0, 10, 0, 1)
     end
   end
 )
