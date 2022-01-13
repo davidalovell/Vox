@@ -15,11 +15,10 @@
 -- param 4: ar envelope release time
 -- input 1: v8 1
 -- input 2: v8 2
--- input 3: volume offset *lfo skew
+-- input 3: volume offset
 -- input 4: gate delay (slop)
 
 -- todo
--- make lfo into triangle with skew based on input[3]
 -- make gate delay (not +/-)
 -- global vars at start of code
 -- code order
@@ -104,16 +103,11 @@ one = function()
   clock.run(
     function()
       -- gate delay
-      -- local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-      local delay = math.random() * round(txi.input[4]) / 10
-      clock.sleep(0.05 + delay)
-
+      clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
       -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
-
       -- trigger ar envelope
       output[4]()
-
       -- play synth
       synth(txi.input[1], txi.param[1] + math.abs(txi.input[3]))
     end
@@ -124,16 +118,11 @@ function()
   clock.run(
     function()
       -- gate delay
-      -- local r = ((0.5 - math.random()) * round(txi.input[4])) / 10
-      local delay = math.random() * round(txi.input[4]) / 10
-      clock.sleep(0.05 + delay)
-
+      clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
       -- outout random voltage centred around 0v
       output[3].volts = math.random() * 10 - 5
-
       -- trigger ar envelope
       output[4]()
-
       -- play synth
       synth(txi.input[2], txi.param[1] + math.abs(txi.input[3]))
     end
