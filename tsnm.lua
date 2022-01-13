@@ -52,10 +52,6 @@ txi.refresh = clock.run(
     end
   end
 )
---
-
-
-
 
 -- helper functions
 function clamp(x, min, max)
@@ -75,12 +71,8 @@ function selector(x, data, in_min, in_max, out_min, out_max)
   out_max = out_max or #data
   return data[ clamp( round( map( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
 end
---
 
-
-
-
---
+-- init
 function init()
   ii.jf.mode(1)
   ii.jf.transpose(-3)
@@ -106,13 +98,8 @@ function init()
   output[1]()
   output[2]()
 end
---
-
-
-
 
 -- clocks
-
 one = function()
   clock.run(
     function()
@@ -164,16 +151,6 @@ refresh = clock.run(
     end
   end
 )
---
-
-
-
-
-
-
-
-
-
 
 -- synth functions
 function synth(note, level)
@@ -185,10 +162,6 @@ function synth(note, level)
   
   ii.jf.play_note(note, level)
 end
---
-
-
-
 
 -- input[1]{mode = 'scale',
 --   notes = {0,1,2,3,4,5,6,7,8,9,10,11},
