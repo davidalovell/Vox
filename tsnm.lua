@@ -19,13 +19,11 @@
 -- input 4: gate delay (slop)
 
 -- todo
--- make gate delay (not +/-)
 -- global vars at start of code
 -- code order
 -- code readability
 -- DRY code
 -- date delay that responds to tempo
--- Change the input to a random gate delay (rather than +/-)
 -- Make input change functions better
 
 
@@ -141,14 +139,18 @@ refresh = clock.run(
   end
 )
 
--- synth functions
+-- synth
 function synth(note, level)
-  note = round(note * 12) / 12
-  level = range(level, 0.5, 10, 0, 5)
-
+  -- if param is ccw then synth is not played
   local enabled = selector(level, {false, true}, 0, 0.1)
   if enabled == false then return end
-  
+
+  -- quantise to semitones
+  note = round(note * 12) / 12
+
+  -- level control
+  level = range(level, 0.5, 10, 0, 5)
+
   ii.jf.play_note(note, level)
 end
 
