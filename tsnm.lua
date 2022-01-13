@@ -77,14 +77,14 @@ function init()
     mode = 'change',
     threshold = 4,
     direction = 'rising',
-    change = one
+    change = function() clock.run(play, 1) end
   }
 
   input[2]{
     mode = 'change',
     threshold = 4,
     direction = 'rising',
-    change = two
+    change = function() clock.run(play, 2) end
   }
 
   output[1].action = lfo(dyn{time = 0.25}, dyn{height = 5}, 'sine')
@@ -93,6 +93,19 @@ function init()
 
   output[1]()
   output[2]()
+  
+  refresh = clock.run(
+    function()
+      while true do
+        clock.sleep(0.1)
+        output[1].dyn.time = 0.005 + 10 - map(txi.param[2], 0, 10, 0, 10)
+        output[2].dyn.time = 0.005 + 20 - map(txi.param[2], 0, 10, 0, 10)
+        output[4].dyn.attack = map(txi.param[3], 0, 10, 0, 1)
+        output[4].dyn.release = map(txi.param[4], 0, 10, 0, 1)
+      end
+    end
+  )
+
 end
 
 one = function()
@@ -117,17 +130,13 @@ two = function()
   )
 end
 
-refresh = clock.run(
-  function()
-    while true do
-      clock.sleep(0.1)
-      output[1].dyn.time = 0.005 + 10 - map(txi.param[2], 0, 10, 0, 10)
-      output[2].dyn.time = 0.005 + 20 - map(txi.param[2], 0, 10, 0, 10)
-      output[4].dyn.attack = map(txi.param[3], 0, 10, 0, 1)
-      output[4].dyn.release = map(txi.param[4], 0, 10, 0, 1)
-    end
-  end
-)
+function play(ix)
+  clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
+  output[3].volts = math.random() * 10 - 5
+  output[4]()
+  synth(txi.input[ix], txi.param[1] + math.abs(txi.input[3]))
+end
+
 
 function synth(note, level)
   local enabled = selector(level, {false, true}, 0, 0.1)
