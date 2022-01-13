@@ -1,19 +1,10 @@
 --- TSNM & JF
--- NB: each w/ has a different address - w/[1] and w/[2]
-
--- TODO
--- make lfo into triangle with skew
--- code order
--- code readability
--- global vars at start of code
--- DRY code
--- slop that responds to tempo
 
 -- crow
 -- input 1: gate 1
 -- input 2: gate 2
--- output 1: lfo 1
--- output 2: lfo 2
+-- output 1: lfo 1 (fast)
+-- output 2: lfo 2 (slow)
 -- output 3: random cv (based on gate 1 and 2)
 -- output 4: ar envelope
 
@@ -25,7 +16,7 @@
 -- input 1: v8 1
 -- input 2: v8 2
 -- input 3: volume offset *lfo skew
--- input 4: slop
+-- input 4: gate delay (slop)
 
 
 
