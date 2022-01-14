@@ -18,15 +18,6 @@
 -- input 3: volume offset
 -- input 4: gate delay (slop)
 
--- todo
--- global vars at start of code
--- code order
--- code readability
--- DRY code
--- date delay that responds to tempo
--- Make input change functions better
-
-
 -- txi getter, saves txi param and input values as a table
 txi = {param = {0,0,0,0}, input = {0,0,0,0}}
 
@@ -50,25 +41,7 @@ txi.refresh = clock.run(
   end
 )
 
--- helper functions
-function clamp(x, min, max)
-  return math.min( math.max( min, x ), max )
-end
-
-function round(x)
-  return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
-end
-
-function map(x, in_min, in_max, out_min, out_max)
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-end
-
-function selector(x, data, in_min, in_max, out_min, out_max)
-  out_min = out_min or 1
-  out_max = out_max or #data
-  return data[ clamp( round( map( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
-end
-
+-- init
 function init()
   ii.jf.mode(1)
   ii.jf.transpose(-3)
@@ -98,21 +71,45 @@ function init()
     function()
       while true do
         clock.sleep(0.1)
-        output[1].dyn.time = 0.005 + 10 - map(txi.param[2], 0, 10, 0, 10)
-        output[2].dyn.time = 0.005 + 20 - map(txi.param[2], 0, 10, 0, 10)
+        output[1].dyn.time = 0.005 + map(txi.param[2], 0, 10, 0, 2.5)
+        output[2].dyn.time = 0.005 + map(txi.param[2], 0, 10, 5, 10)
         output[4].dyn.attack = map(txi.param[3], 0, 10, 0, 1)
         output[4].dyn.release = map(txi.param[4], 0, 10, 0, 1)
       end
     end
   )
-
 end
 
+-- helper functions
+function clamp(x, min, max)
+  return math.min( math.max( min, x ), max )
+end
+
+function round(x)
+  return x % 1 >= 0.5 and math.ceil(x) or math.floor(x)
+end
+
+function map(x, in_min, in_max, out_min, out_max)
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+end
+
+function selector(x, data, in_min, in_max, out_min, out_max)
+  out_min = out_min or 1
+  out_max = out_max or #data
+  return data[ clamp( round( map( x, in_min, in_max, out_min, out_max ) ), out_min, out_max ) ]
+end
+
+-- synth functions
 function play(ix)
-  clock.sleep(0.05 + math.random() * round(txi.input[4]) / 10)
+  local random_level = math.random() * round(txi.input[3])
+  local random_delay = math.random() * round(txi.input[4]) / 40
+
+  clock.sleep(0.05 + random_delay)
+
   output[3].volts = math.random() * 10 - 5
   output[4]()
-  synth(txi.input[ix], txi.param[1] + math.abs(txi.input[3]))
+
+  synth(txi.input[ix], txi.param[1] + random_level)
 end
 
 function synth(note, level)
@@ -120,16 +117,7 @@ function synth(note, level)
   if enabled == false then return end
 
   note = round(note * 12) / 12
-  level = range(level, 0.5, 10, 0, 5)
+  level = map(level, 0.5, 10, 0, 5)
 
   ii.jf.play_note(note, level)
 end
-
--- input[1]{mode = 'scale',
---   notes = {0,1,2,3,4,5,6,7,8,9,10,11},
---   scale = function(s)
---     input[1].index = s.index
---     input[1].octave = s.octave
---     input[1].note = s.note
---   end
--- }
