@@ -100,7 +100,7 @@ function selector(x, data, in_min, in_max, out_min, out_max)
 end
 
 -- synth functions
-function play(ix)
+function play(txi_input_ix)
   local random_level = math.random() * round(txi.input[3])
   local random_delay = math.random() * round(txi.input[4]) / 40
 
@@ -109,7 +109,7 @@ function play(ix)
   output[3].volts = math.random() * 10 - 5
   output[4]()
 
-  synth(txi.input[ix], txi.param[1] + random_level)
+  synth(txi.input[txi_input_ix], txi.param[1] + random_level)
 end
 
 function synth(note, level)
