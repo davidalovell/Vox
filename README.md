@@ -1,2 +1,6 @@
-# Vox
-'Voice' object for monome crow, sequenced with sequins
+# TSNM Helper Script
+
+- TSNM
+- Crow
+- JF
+- TXi
